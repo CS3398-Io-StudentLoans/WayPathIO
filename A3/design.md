@@ -6,7 +6,7 @@ We will be splitting up the classes into the following portions:
 * Interfaces (interfaces.java) - (Team Member 2)
 * Manager Class (manager.java) - (Team Member 3)
 * Worker Class (worker.java) - (Brian Chamblee)
-* Robot Class (robot.java) - (Team Member 5)
+* Robot Class (robot.java) - (Rolando Martinez)
 
 ## Main Method
 The team member working on the main method will work implementing what the workable classes and managers will do.
