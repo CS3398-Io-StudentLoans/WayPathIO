@@ -9,7 +9,9 @@ import threesolid.interfaces;
 import threesolid.robot;
 
 class Manager {
-
+/* implements the iFeedable interface
+ * 
+ */
     public void Manager() {
 
     }
