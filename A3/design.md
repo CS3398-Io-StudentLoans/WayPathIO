@@ -16,15 +16,20 @@ The team member working on the main method will work implementing what the worka
 * By separating the two different types of interfaces, we follow the **interface separation principle.** If we place the two interfaces in one interface, robots will implement the eat() method, which they don't need to use.
 - The interface separation principle states that interfaces should be separated into many specific interfaces rather than one interface that has extraneous methods that a class may not need.
 
-## Manager Class
+## Classes
+* We will separate the three different classes as they have three similar, but different functions. The Robot may later on need to complete tasks that are tedious but able to be automated, while normal workers may work on tasks that need a more "human touch". By following the **Single Responsibility Principle** we split up the classes, so we are not limited to only one type of work.
+
+* We also follow the **Open Close Principle** by providing three base classes which can then later be extended/inherited. The Open Close Principle states that a design should be open to extension and closed to modification.
+
+### Manager Classes
 * Implements the iFeedable and iWorkable interfaces.
 * Methods: eat(), work(), manage(), and setWorker()
 
-## Worker Class
+### Worker Classes
 * Implements the iFeedable and iWorkable interfaces.
 * Methods: eat() and work()
 
-## Robot Class
+### Robot Classes
 * Implements the iWorkable interfaces.
 * Methods: work()
     
