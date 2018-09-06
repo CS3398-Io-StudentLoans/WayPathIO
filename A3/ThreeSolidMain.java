@@ -4,31 +4,33 @@ import java.awt.*;        // Using AWT container and component classes
 import java.awt.event.*;  // Using AWT event classes and listener interfaces
 import java.io.*;
 
+
+
 //import threesolid.IWorker;
 
 
 public class ThreeSolidMain
-{   
+{
 
    public static Manager tsManager = new Manager();
 
    // The entry main() method
-   public static void main(String[] args) 
+   public static void main(String[] args)
    {
- 
-      try 
+
+      try
       {
-         System.out.format("Starting ... \n");               
-      } 
+         System.out.format("Starting ... \n");
+      }
       catch (Exception main_except)
       {
          main_except.printStackTrace();
       }
 
-            try 
+            try
       {
-         System.out.format("Stopping ... \n");               
-      } 
+         System.out.format("Stopping ... \n");
+      }
       catch (Exception main_except)
       {
          main_except.printStackTrace();
@@ -43,7 +45,7 @@ public class ThreeSolidMain
 interface IWorker {
 	public void work();
 	public void eat();
-}   
+}
 
 class Worker implements IWorker{
 	public void work() {
@@ -66,7 +68,7 @@ class SuperWorker implements IWorker{
 }
 
 class Manager {
-	IWorker worker;
+    Workable worker;
 
 	public void Manager() {
 
