@@ -2,7 +2,7 @@
 
 We will be splitting up the classes into the following portions:
 
-* Main Method (main.java) - (Team Member 1)
+* Main Method (main.java) - (Daniel Le)
 * Interfaces (interfaces.java) - (Team Member 2)
 * Manager Class (manager.java) - (Team Member 3)
 * Worker Class (worker.java) - (Brian Chamblee)
