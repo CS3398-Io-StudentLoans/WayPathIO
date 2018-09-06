@@ -14,6 +14,8 @@ class Manager {
  * 
  * Manager keeps in mind the singple responbilbity princple by only including responsiblilites that only a manger would have and not others that can be implemented 
  * worker
+ * 
+ * Manager class does not apply to the interface segregation principle
  */ 
     public void Manager() {
 
