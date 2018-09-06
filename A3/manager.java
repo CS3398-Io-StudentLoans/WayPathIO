@@ -10,7 +10,7 @@ import threesolid.robot;
 
 class Manager {
 /* implements the iFeedable interface
- * 
+ * methods: eat(), work(), manage(), setWorker()
  */
     public void Manager() {
 
