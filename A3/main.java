@@ -16,6 +16,7 @@ public class ThreeSolidMain
 
     // The entry main() method
     // Applies to Single Responsiblity Principle since only main class will be in this file and it acts as an implementation of other classes
+    //Interface Segregation Principle and Open Close Principle doesn't apply to main
     public static void main(String[] args)
     {
 
