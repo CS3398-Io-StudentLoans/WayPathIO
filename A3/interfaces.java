@@ -6,7 +6,8 @@ import java.io.*;
 
 // separating IWorker interface into 2 which implies the Interface Segregation Principle.
 // The robot class will not implement the eat method.
-// Single Responsibility Principle and Open Close principle doesn't apply to interface class
+// This file also implies Single Responsibility Principle as it is only responsible for interfaces
+// this file doesn't apply to Open Class Principle
 interface IWorkable {
     public void work();
 }
