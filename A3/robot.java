@@ -5,7 +5,10 @@ import java.io.*;
 import threesolid.interfaces;
 
 
-
+/*Robot Classes
+Implements the iWorkable interfaces.
+Methods: work()
+*/
 class Worker implements IWorkable{
     public void work() {
         // ....working
