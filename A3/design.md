@@ -2,7 +2,7 @@
 
 We will be splitting up the classes into the following portions:
 
-* Main Method (main.java) - (Team Member 1)
+* Main Method (main.java) - (Daniel Le)
 * Interfaces (interfaces.java) - (Team Member 2)
 * Manager Class (manager.java) - (Jose Martinez)
 * Worker Class (worker.java) - (Brian Chamblee)
@@ -23,7 +23,7 @@ The team member working on the main method will work implementing what the worka
 
 ### Manager Classes
 * Implements the iFeedable and iWorkable interfaces.
-* Methods: eat(), work(), manage(), and setWorker()
+* Methods: manage(), and setWorker()
 
 ### Worker Classes
 * Implements the iFeedable and iWorkable interfaces.
