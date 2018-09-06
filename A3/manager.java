@@ -11,7 +11,10 @@ import threesolid.robot;
 class Manager {
 /* implements the iFeedable interface
  * methods: eat(), manage(), setWorker()
- */
+ * 
+ * Manager keeps in mind the singple responbilbity princple by only including responsiblilites that only a manger would have and not others that can be implemented 
+ * worker
+ */ 
     public void Manager() {
 
     }
