@@ -16,6 +16,8 @@ class Manager {
  * worker
  * 
  * Manager class does not apply to the interface segregation principle
+ * 
+ * Manager classs keeps in mind the open/close principle since it will be made to allow extensions 
  */ 
     public void Manager() {
 
