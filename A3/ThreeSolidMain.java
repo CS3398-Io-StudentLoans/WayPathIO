@@ -3,8 +3,8 @@ package threesolid;
 import java.awt.*;        // Using AWT container and component classes
 import java.awt.event.*;  // Using AWT event classes and listener interfaces
 import java.io.*;
-import threesolid.IWorker;
-import threesolid.IFeedable;
+
+//import threesolid.IWorker;
 
 
 public class ThreeSolidMain
@@ -42,13 +42,10 @@ public class ThreeSolidMain
 // interface segregation principle - good example
 interface IWorker {
 	public void work();
-}
+	public void eat();
+}   
 
-interface IFeedable {
-    public void eat();
-}
-
-class Worker implements IWorker, IFeedable{
+class Worker implements IWorker{
 	public void work() {
 		// ....working
 	}
@@ -58,7 +55,7 @@ class Worker implements IWorker, IFeedable{
 	}
 }
 
-class SuperWorker implements  IWorker, IFeedable{
+class SuperWorker implements IWorker{
 	public void work() {
 		//.... working much more
 	}
@@ -81,12 +78,4 @@ class Manager {
 	public void manage() {
 		worker.work();
 	}
-}
-
-class RobotWorker implements IWorker {
-
-    public void work(){
-        //....working
-    }
-
 }
