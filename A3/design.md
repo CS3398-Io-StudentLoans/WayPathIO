@@ -4,7 +4,7 @@ We will be splitting up the classes into the following portions:
 
 * Main Method (main.java) - (Team Member 1)
 * Interfaces (interfaces.java) - (Team Member 2)
-* Manager Class (manager.java) - (Team Member 3)
+* Manager Class (manager.java) - (Jose Martinez)
 * Worker Class (worker.java) - (Brian Chamblee)
 * Robot Class (robot.java) - (Rolando Martinez)
 
