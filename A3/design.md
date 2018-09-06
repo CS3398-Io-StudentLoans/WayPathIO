@@ -23,7 +23,7 @@ The team member working on the main method will work implementing what the worka
 
 ### Manager Classes
 * Implements the iFeedable and iWorkable interfaces.
-* Methods: eat(), work(), manage(), and setWorker()
+* Methods: manage(), and setWorker()
 
 ### Worker Classes
 * Implements the iFeedable and iWorkable interfaces.
