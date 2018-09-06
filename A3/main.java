@@ -15,6 +15,7 @@ public class ThreeSolidMain
     public static Manager tsManager = new Manager();
 
     // The entry main() method
+    // Applies to Single Responsiblity Principle since only main class will be in this file and it acts as an implementation of other classes
     public static void main(String[] args)
     {
 
