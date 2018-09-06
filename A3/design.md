@@ -3,7 +3,7 @@
 We will be splitting up the classes into the following portions:
 
 * Main Method (main.java) - (Daniel Le)
-* Interfaces (interfaces.java) - (Team Member 2)
+* Interfaces (interfaces.java) - (Maojun Tian)
 * Manager Class (manager.java) - (Jose Martinez)
 * Worker Class (worker.java) - (Brian Chamblee)
 * Robot Class (robot.java) - (Rolando Martinez)
