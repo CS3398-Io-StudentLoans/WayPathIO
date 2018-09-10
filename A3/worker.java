@@ -34,7 +34,7 @@ class Worker implements IWorkable, IFeedable{
     }
 }
 
-class SuperWorker IWorkable, IFeedable{
+class SuperWorker implements IWorkable, IFeedable{
     public void work() {
         //.... working much more
     }
