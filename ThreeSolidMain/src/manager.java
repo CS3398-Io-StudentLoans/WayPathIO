@@ -4,9 +4,6 @@ import java.awt.*;        // Using AWT container and component classes
 import java.awt.event.*;  // Using AWT event classes and listener interfaces
 import java.io.*;
 
-//import ThreeSolidPrinciples.worker;
-//import ThreeSolidPrinciples.interfaces;
-//import ThreeSolidPrinciples.robot;
 
 class Manager {
 /* implements the iFeedable interface
@@ -20,7 +17,7 @@ class Manager {
  * Manager classs keeps in mind the open/close principle since it will be made to allow extensions 
  */ 
 	
-	IWorkable worker;
+    IWorkable worker;
 	
     public void Manager() {
 
@@ -32,7 +29,7 @@ class Manager {
 
     public void manage () {
         worker.work();
-        }
+    }
 
 
 }
