@@ -9,7 +9,7 @@ import threesolid.interfaces;
 import threesolid.robot;
 import threesolid.manager;
 
-public class ThreeSolidMain
+public class main
 {
 
     public static Manager tsManager = new Manager();
