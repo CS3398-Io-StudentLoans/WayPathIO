@@ -13,7 +13,7 @@ var map = new ol.Map({
         
         view: new ol.View({
         center: txStateWebMercator,
-        zoom: 15
+        zoom: 16
         })
       });
 
