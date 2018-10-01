@@ -1,51 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body{
-            background: url('test.jpg') no-repeat center center fixed;
-        }
-      .map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
-    <title>WayPathIO</title>
-  </head>
-  <body>
+  	<meta charset="utf-8">
+	<title>WayPathIO</title>
     <h2>
-        <font color="FFFF">
+        <font color="000000">
             WayPathIO Map 
         </font>
-        </font>
     </h2>
+    
     <div id="map" class="map"></div>
-    </body>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.transform([-97.943015, 29.888787], 'EPSG:4326', 'EPSG:3857'),
-          zoom: 15
-        })
-      });
-    </script>
-    <div id='map' style='width: 400px; height: 300px;'></div>
-	<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
-	var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v10'
-	});
-	</script>
+	
+	<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
+
+  	<!-- Include OpenLayers JavaScript library -->
+  	<script type="text/javascript" src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
+  	
+  	<script type="text/javascript" src="map.js"></script>
+
+  	<!-- <script type="text/javascript" src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script> -->
+
+    <link rel="stylesheet" href="styles.css">
+    
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'>
+
+  </head>
+
+  <body>
   </body>
 </html>
