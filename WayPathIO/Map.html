@@ -3,6 +3,9 @@
   <head>
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
     <style>
+        body{
+            background: url('test.jpg') no-repeat center center fixed;
+        }
       .map {
         height: 400px;
         width: 100%;
@@ -12,7 +15,12 @@
     <title>WayPathIO</title>
   </head>
   <body>
-    <h2>WayPathIO Map</h2>
+    <h2>
+        <font color="FFFF">
+            WayPathIO Map 
+        </font>
+        </font>
+    </h2>
     <div id="map" class="map"></div>
     <script type="text/javascript">
       var map = new ol.Map({
