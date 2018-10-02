@@ -1,6 +1,7 @@
 .map {
         height: 600px;
         width: 100%;
+        
       }
 
 #index {
@@ -17,16 +18,17 @@ body{
  	width: 100%;
     font-size:25px;
     font-family: "Arial", Arial, Sans-serif;
-    color: black;
+    color: white;
     font-weight:bold;
-    background-color:#9a908e;
+    background-color:#667399;
+    font-weight: 100;
     float:left;
 }
 /*.suggestionsBox {position:absolute; top:40px;}*/
 
  /* Dropdown Button */
 .dropbtn {
-    background-color:  #667399;
+    background-color:  #667399; 
     opacity : 0.9;
     padding: 13px;
     color: white;  
@@ -35,6 +37,7 @@ body{
     border-radius: 6px;
     cursor: pointer;
     width:50px;
+    
     
 }
 
@@ -82,6 +85,7 @@ body{
 }
 
 .dropdown a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
 
 .show {display: block;}
 
