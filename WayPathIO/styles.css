@@ -26,18 +26,20 @@ body{
 
  /* Dropdown Button */
 .dropbtn {
-    background-color: #4169E1;
-    color: white;
-    padding: 10px;
+    background-color:  #667399;
+    opacity : 0.9;
+    padding: 13px;
+    color: white;  
     font-size: 16px;
-    border: none;
+    border: 2px solid white;
+    border-radius: 6px;
     cursor: pointer;
     width:50px;
     
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #191970;
+    background-color:  #3e4c74;
 }
 
 #myInput {
@@ -55,8 +57,8 @@ body{
 
 .dropdown {
     position: absolute; 
-    top: 87px ;
-  	right: 9px ;
+    top: 95px ;
+  	right: 17px ;
     display: inline-block;
 }
 
