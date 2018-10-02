@@ -28,6 +28,41 @@
   </head>
 
   <body>
-  	<button style="width:50%;padding:0;margin:100px 100px;float:left;box-sizing:border-box;" type="button" right= 50  onclick=location.href='index.html';>Home</button>
+  	<!--<button style="width:50px; height:30px; font-size: 16px; padding:0;position:absolute; top:87px;right:300px;box-sizing:border-box;" type="button" right= 50  onclick=location.href='index.html';>Home</button>-->
+  
+  
+  <!---drop down menu-->
+ <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">&#9660</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
+    <a href="index.html">Home</a>
+    
+  </div>
+</div> 
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
   </body>
 </html>
