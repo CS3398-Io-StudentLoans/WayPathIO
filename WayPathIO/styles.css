@@ -6,7 +6,10 @@
 #index {
     background: url('test.jpg') no-repeat center center fixed;
 }
+body{
+    background: url('test.jpg') no-repeat center center fixed;
 
+}
 #content, #right {
 
  	width: 100%;
