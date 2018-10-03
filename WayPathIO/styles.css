@@ -12,12 +12,16 @@ body{
 /*border on top */
 #content, #right {
  	width: 100%;
+ 	height: 50px;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
     font-size:25px;
-    font-family: "Arial", Arial, Sans-serif;
+    font-family: "Helvetica";
     color: white;
     font-weight:bold;
     background-color:#667399;
     font-weight: 100;
+    vertical-align: middle;
     float:left;
 }
 
