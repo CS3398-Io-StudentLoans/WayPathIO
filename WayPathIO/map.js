@@ -7,6 +7,8 @@ var alk = [-97.943114, 29.888868];
 //var txStateWebMercator1 = ol.proj.fromLonLat(tmh);
 var txStateWebMercator = ol.proj.fromLonLat(txState);
 var alkMercator = ol.proj.fromLonLat(alk);
+var tmhMercator = ol.proj.fromLonLat(tmh);
+var fhMercator = ol.proj.fromLonLat(fh);
 
 function changeToWebMercator(coord) {
   ol.proj.fromLonLat(coord)
@@ -32,15 +34,21 @@ var map = new ol.Map({
 function panAlk(){
   map.setView(new ol.View({
             center: alkMercator,
-            zoom: 18
+            zoom: 19
      }));
-};
 
+};
 //function to control Alkek
 function panTmh(){
   map.setView(new ol.View({
-            center: alkMercator,
-            zoom: 18
+            center: tmhMercator,
+            zoom: 19
+     }));
+};    
+     function panFh(){
+  map.setView(new ol.View({
+            center: fhMercator,
+            zoom: 19
      }));
 };
 
