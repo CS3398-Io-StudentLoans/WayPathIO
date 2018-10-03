@@ -136,7 +136,10 @@ h2 span {
 table {
     max-width:100%;
     margin: 10px auto;
+    position : absolute;
+    top : 20%;
 }
+
 table img {
     max-width:100%;
 }
