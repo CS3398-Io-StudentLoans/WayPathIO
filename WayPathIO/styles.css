@@ -103,6 +103,8 @@ a {
 
 div.links img {
      padding:100px;
+     max-width: 100%;
+     float:left;
  }
 
 a {
@@ -115,7 +117,7 @@ h2 {
    top: 250px;
    left: 0;
    width: 100%;
-   padding:100px;
+   max-width:100%;
 }
 
 h2 span {
@@ -125,4 +127,12 @@ h2 span {
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
    padding: 10px;
+}
+
+table {
+    max-width:100%;
+    margin: 10px auto;
+}
+table img {
+    max-width:100%;
 }
