@@ -3,26 +3,30 @@ var txState = [-97.942999, 29.888998];
 var tmh = [-97.941480, 29.889306];
 var fh = [ -97.940402, 29.888836];
 var alk = [-97.943114, 29.888868];
-var acaService = [ -97.939079, 29.888504];
-var acadStGar = [ -97.948008 , 29.885892];
-var agBuilding = [ -97.938145, 29.890531 ];
-var angelHall = [ -97.953664, 29.889337 ];
-var aquSpCent = [ -97.937676, 29.890435 ];
-var arnHall =[ -97.943393, 29.890030 ];
-var bexHall = [ -97.940630,  29.888191 ];
-var bareHall = [ -97.940652, 29.888212 ];
-var blanHall = [ -97.951948, 29.887061 ];
-var ballPark = [ -97.928224, 29.887702 ];
-var bobStad = [ -97.925486, 29.890878 ];
-var bobStadEnd = [ -97.925368, 29.890168 ];
-var bobVill = [ -97.922293, 29.893113 ];
-var brazon = [ -97.939905, 29.887792 ];
-var brogHall = [ -97.939902, 29.887772];
-var butlHall = [ -97.938757, 29.887084 ];
-var centHall = [ -97.940008 , 29.889653];
-var centerStuRet = [ -97.940278, 29.885636 ];
-var chautHall = [ -97.946845, 29.890479 ];
-var chem = [ -97.939451, 29.889599 ];
+var acaService =  [ -97.939079, 29.888504];
+var acadStGar =   [ -97.948008, 29.885892];
+var agBuilding =  [ -97.938145, 29.890531 ];
+var angelHall =   [ -97.953664, 29.889337 ];
+var aquSpCent =   [ -97.937676, 29.890435 ];
+var arnHall =     [ -97.943393, 29.890030 ];
+var bexHall =     [ -97.948096, 29.886397 ];
+var bareHall =    [ -97.940652, 29.888212 ];
+var blanHall =    [ -97.951916, 29.887162 ];  
+var blancoPark=   [ -97.953026, 29.887134 ];
+var ballPark =    [ -97.928224, 29.887702 ];
+var bobStad =     [ -97.925486, 29.890878 ];
+var bobStadEnd =  [ -97.925368, 29.890168 ];
+var bobVill =     [ -97.922293, 29.893113 ];
+var brazon =      [ -97.939905, 29.887792 ];
+var brogHall =    [ -97.939902, 29.887772 ];
+var butlHall =    [ -97.938757, 29.887084 ];
+var centHall =    [ -97.940008, 29.889653 ];
+var centerStuRet =[ -97.940278, 29.885636 ];
+var chautHall =   [ -97.946845, 29.890479 ];
+var chem =        [ -97.939451, 29.889599 ];
+
+
+
 
 //var txStateWebMercator1 = ol.proj.fromLonLat(tmh);
 var txStateWebMercator = ol.proj.fromLonLat(txState);
@@ -48,6 +52,9 @@ var centHallMercator = ol.proj.fromLonLat(centHall);
 var centerStudRetMercator = ol.proj.fromLonLat(centerStuRet);
 var chautHallMercator = ol.proj.fromLonLat(chautHall);
 var chemMercator = ol.proj.fromLonLat(chem);
+var blanHallMercator = ol.proj.fromLonLat(blanHall);
+var blancoParkMercator = ol.proj.fromLonLat(blancoPark);
+
 
 
 function changeToWebMercator(coord) {
@@ -161,9 +168,30 @@ function panTmh(){
 };
 
 //function to control baretta hall
-     function panBere(){
+     function panBare(){
   map.setView(new ol.View({
-            center: bareHall,
+            center: bareHallMercator,
+            zoom: 19
+     }));
+};
+//function to control blanco hall
+     function panBlan(){
+  map.setView(new ol.View({
+            center: blanHallMercator,
+            zoom: 19
+     }));
+};
+//function to control blanco parking
+     function panblanPark(){
+  map.setView(new ol.View({
+            center: blancoParkMercator,
+            zoom: 19
+     }));
+};
+// function to control ball park
+      function panballPark(){
+  map.setView(new ol.View({
+            center: ballParkMercator,
             zoom: 19
      }));
 };
