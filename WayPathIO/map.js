@@ -97,6 +97,14 @@ function panTmh(){
 //function to control Academic services building
      function panAcad(){
   map.setView(new ol.View({
+            center: acaServiceMercator,
+            zoom: 19
+     }));
+};
+
+//function to control Academy street garage
+     function panAcadGar(){
+  map.setView(new ol.View({
             center: acadStGarMercator,
             zoom: 19
      }));
@@ -117,6 +125,16 @@ function panTmh(){
             zoom: 19
      }));
 };
+
+//function to control Aqua sports center
+     function panAqua(){
+  map.setView(new ol.View({
+            center: aquSpMercator,
+            zoom: 19
+     }));
+};
+
+
 
 //function to control Aqua sports center
      function panAquSpCen(){
