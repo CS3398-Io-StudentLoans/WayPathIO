@@ -14,3 +14,6 @@ Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texa
 We currently have a static website that can be loaded locally on a browser (1), or viewed online (2). 
   1. Clone a copy of the "develop" branch of the repository and open index.html in your preferred browser. All of the links and files should load onto your browser.
   2. Navigate to https://userweb.cs.txstate.edu/~d_l310/waypathio/.
+
+## **Next Step**
+We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. 
