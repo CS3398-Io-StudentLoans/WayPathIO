@@ -15,5 +15,10 @@ We currently have a static website that can be loaded locally on a browser (1), 
   1. Clone a copy of the "develop" branch of the repository and open index.html in your preferred browser. All of the links and files should load onto your browser.
   2. Navigate to https://userweb.cs.txstate.edu/~d_l310/waypathio/.
 
-## **Next Step**
+## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. 
+   * Brian Chamblee
+   * Daniel Le - Figuring out how to get the static website into a dynamic web application.
+   * Jose (Jay) Martinez
+   * Rolando Martinez
+   * Maojun (Brandon) Tian
