@@ -17,7 +17,7 @@ We currently have a static website that can be loaded locally on a browser (1), 
 
 ## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. We will all go through the tutorial for OpenLayers in order to use it with the Node.js web framework.
-   * Brian Chamblee
+   * Brian Chamblee - add navigation function 
    * Daniel Le - Figuring out how to get the static website into a dynamic web application.
    * Jose (Jay) Martinez
    * Rolando Martinez - Change the geolocations of our drop down menu's building list once we've changed our map file.
