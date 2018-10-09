@@ -21,4 +21,4 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Daniel Le - Figuring out how to get the static website into a dynamic web application.
    * Jose (Jay) Martinez
    * Rolando Martinez - Change the geolocations of our drop down menu's building list once we've changed our map file.
-   * Maojun (Brandon) Tian
+   * Maojun (Brandon) Tian - Adding features to the landing page.
