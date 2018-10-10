@@ -6,9 +6,12 @@
    * Daniel Le
    * Jose (Jay) Martinez
    * Rolando Martinez
-   * Maojun (Brandon) Tian
+   * Maojun (Brandon) Tian - landing page(index.html https://github.com/CS3398-IoStudentLoans/WayPathIO/blob/develop/WayPathIO/index.html)
    
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
+
+## **Status of Project**
+Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
 
 ## **Running the Code**
 We currently have a static website that can be loaded locally on a browser (1), or viewed online (2). 
