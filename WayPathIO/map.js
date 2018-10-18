@@ -196,7 +196,72 @@ function panTmh(){
      }));
 };
 
+//---------------
 
+// function to control ball park
+      function panbobStand(){
+  map.setView(new ol.View({
+            center: bobStadMercator,
+            zoom: 19
+     }));
+};
+
+      function panbobStandEnd(){
+  map.setView(new ol.View({
+            center: bobStandEndMercator,
+            zoom: 19
+     }));
+};
+
+      function panbobVill(){
+  map.setView(new ol.View({
+            center: bobVillMercator,
+            zoom: 19
+     }));
+};
+
+      function panbrazon(){
+  map.setView(new ol.View({
+            center: brazonMercator,
+            zoom: 19
+     }));
+};
+
+
+      function panbutlHall(){
+  map.setView(new ol.View({
+            center: butlHallMercator,
+            zoom: 19
+     }));
+};
+
+      function pancentHall(){
+  map.setView(new ol.View({
+            center: centHallMercator,
+            zoom: 19
+     }));
+};
+
+      function pancenterStuRet(){
+  map.setView(new ol.View({
+            center: centerStudRetMercator,
+            zoom: 19
+     }));
+};
+
+      function panchautHall(){
+  map.setView(new ol.View({
+            center: chautHallMercator,
+            zoom: 19
+     }));
+};
+
+      function panchem(){
+  map.setView(new ol.View({
+            center: chemMercator,
+            zoom: 19
+     }));
+};
 
 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
