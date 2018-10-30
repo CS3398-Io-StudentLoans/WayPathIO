@@ -1,0 +1,80 @@
+block content
+	doctype html              
+	html.
+		<head>
+			<meta charset="utf-8">
+			<title>WayPathIO</title>
+				<div id="content">
+					<p><a href="/">&nbsp WayPathIO Map</a></p>
+				</div>
+				<div id="map" class="map"></div>
+				<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
+				<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.csss" type="text/css">
+				<!-- Include OpenLayers JavaScript library -->
+				<script type="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
+				<script type="text/javascript" src="javascripts/map.js"></script>
+				<!-- <script type="text/javascript" src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script> -->
+				<link rel="stylesheet" href="stylesheets/styles.css">
+				<link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'>
+		</head>
+		<body>
+		<!--<button style="width:50px; height:30px; font-size: 16px; padding:0;position:absolute; top:87px;right:300px;box-sizing:border-box;" type="button" right= 50  onclick=location.href='index.html';>Home</button>-->
+		<!---drop down menu-->
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">&#9660</button>
+			<div id="myDropdown" class="dropdown-content">
+			<input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
+				<a href="aboutus.html">About</a>
+				<a href="#" onclick="panAcad()" >Academic Services Building North</a>
+				<a href="#" onclick="panAcad()">Academic Services Building South</a>
+				<a href="#" onclick ="panAcadGar()">Academy Street Garage</a>
+				<a href="#" onclick="panAg()">Agriculture</a>
+				<a href="#" onclick="panAlk()">Albert B. Alkek Library</a>
+				<a href="#"onclick="panAlk()">Albert B. Alkek Parking Garage</a>
+				<a href="#" onclick="panAngel()">Angelina Hall</a>
+				<a href="#"onclick="panAqua()">Aqua Sports Center</a>
+				<a href="#" onclick="panArnHall()">Arnold Hall</a>
+				<a href="#" onclick="panBare()">Beretta Hall</a>
+				<a href="#" onclick="panBexH()">Bexar Hall</a>
+				<a href="#" onclick="panBlan()">Blanco Hall</a>
+				<a href="#" onclick="panblanPark()">Blanco Parking Garage</a>
+				<a href="#" onclick="panballPark()">Bobcat Ballpark</a>
+				<a href="#" onclick="panbobStand()">Bobcat Stadium</a>
+				<a href="#" onclick="panbobStandEnd()">Bobcat Stadium End Zone Complex</a>
+				<a href="#" onclick="panbobVill()">Bobcat Village</a>
+				<a href="#" onclick="panbrazon()">Brazos</a>
+				<a href="#">Brogdon Hall</a>
+				<a href="#" onclick="panbutlHall()">Butler Hall</a>
+				<a href="#" onclick="pancentHall()">Centennial Hall</a>
+				<a href="#" onclick="pancenterStuRet()">Center for Student Retention</a>
+				<a href="#" onclick="panchautHall()">Chautauqua Hall</a>
+				<a href="#" onclick="panchem()">Chemistry</a>
+				<a href="#">Child Development Center</a>
+				<a href="#">College Inn</a>
+				<a href="#">College of Education</a>
+				<a href="#">Colorado</a>
+					</div>
+				</div>
+				<script>
+				// animations stutter on mobile or slow devices.
+				/* When the user clicks on the button,
+				toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				}
+				function filterFunction() {
+					var input, filter, ul, li, a, i;
+					input = document.getElementById("myInput");
+					filter = input.value.toUpperCase();
+					div = document.getElementById("myDropdown");
+					a = div.getElementsByTagName("a");
+					for (i = 0; i < a.length; i++) {
+						if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							a[i].style.display = "";
+						} else {
+							a[i].style.display = "none";
+						}
+					}
+				}
+				</script>
+				</body>
