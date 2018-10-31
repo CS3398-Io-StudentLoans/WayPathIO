@@ -4,7 +4,8 @@
   	<meta charset="utf-8">
 	<title>WayPathIO</title>
 <div id="content">
-    <p><a href="index.html">&nbsp WayPathIO Map</a></p>
+    <p1><a href="index.html">&nbsp WayPathIO Map</a></p1>
+    <p2 id = "demo"></p2>
 </div>
 
     
@@ -189,6 +190,24 @@ function onClick(id, callback) {
 });
 */
 // Improve us
+</script>
+      
+<script>
+    var request = new XMLHttpRequest();
+
+    var requestURL = 'https://raw.githubusercontent.com/CS3398-Io-StudentLoans/WayPathIO/TestRolando/WayPathIO/gis/centroids.geojson';
+
+
+    request.open('GET', requestURL);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200){
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("demo").innerHTML = myObj.name;
+        }
+    };
+    request.open("GET", requestURL, true);
+    request.send();
 </script>
 
 

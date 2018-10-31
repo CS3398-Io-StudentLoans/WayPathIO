@@ -1,3 +1,7 @@
+
+
+
+
 //Follow this website for tutorial: https://openlayers.org/en/latest/doc/quickstart.html
 var txState = [-97.942999, 29.888998];
 var tmh = [-97.941480, 29.889306];
@@ -31,6 +35,10 @@ var chem =        [ -97.939451, 29.889599 ];
 //var txStateWebMercator1 = ol.proj.fromLonLat(tmh);
 var txStateWebMercator = ol.proj.fromLonLat(txState);
 var alkMercator = ol.proj.fromLonLat(alk);
+
+
+
+
 var tmhMercator = ol.proj.fromLonLat(tmh);
 var fhMercator = ol.proj.fromLonLat(fh);
 var acaServiceMercator = ol.proj.fromLonLat(acaService);
@@ -85,6 +93,9 @@ function panAlk(){
      }));
 
 };
+
+
+/********************
 //function to control Alkek
 function panTmh(){
   map.setView(new ol.View({
@@ -262,11 +273,30 @@ function panTmh(){
             zoom: 19
      }));
 };
-
+*/
 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
   
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v10'
-});*/
+});
+
+*******************/
+
+
+
+// Requesting URL 
+var request = new XMLHttpRequest();
+
+var requestURL = 'https://raw.githubusercontent.com/CS3398-Io-StudentLoans/WayPathIO/TestRolando/WayPathIO/gis/centroids.geojson';
+
+
+request.open('GET', requestURL);
+
+request.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("")
+    }
+}
