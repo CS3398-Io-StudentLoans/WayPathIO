@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/styles.8986bff4.css">
   <script src="/styles.8986bff4.js"></script><link rel="stylesheet" href="/map.27237bf4.css"></head>
   <body>
-    <div id="map"></div>
+    <div id="map" class="map"></div>
+    <div id="info" style="display: none;"></div>
+    
     <script src="/map.27237bf4.js"></script>
 
     <div class="dropdown">
@@ -126,6 +128,19 @@
         <a href="">William & Elizabeth Adamson ROTC</a> 
         <a href="">Woods Street Garage</a>  
       </div>
-    </div> 
+    </div>
+
+    <label for="track">
+      Track Position:
+      <input id="track" type="checkbox">
+    </label>
+    <p>
+      position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
+      altitude : <code id="altitude"></code>&nbsp;&nbsp;
+      altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
+      heading : <code id="heading"></code>&nbsp;&nbsp;
+      speed : <code id="speed"></code>
+    </p>
+
   </body>
 </html>

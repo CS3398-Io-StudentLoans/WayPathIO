@@ -1,9 +1,18 @@
 import 'ol/ol.css';
 import Map from 'ol/Map';
 import View from 'ol/View';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
+//import TileLayer from 'ol/layer/Tile';
+//import OSM from 'ol/source/OSM';
 import {fromLonLat} from 'ol/proj';
+
+//GPS imports
+import Feature from 'ol/Feature.js';
+import Geolocation from 'ol/Geolocation.js'
+import {defaults as defaultControls} from 'ol/control.js';
+import Point from 'ol/geom/Point.js';
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
+import {OSM, Vector as VectorSource} from 'ol/source.js';
+import {Circle as CircleStyle, Fill, Stroke, Style} from 'ol/style.js';
 
 var txState = [-97.942999, 29.888998];
 var tmh = [-97.941480, 29.889306];
@@ -68,9 +77,76 @@ var map = new Map({
       source: new OSM()
     })
   ],
+
+  controls: defaultControls({
+    attributionOptions: {
+      collapsible: false
+    }
+  }),
+
   view: new View({
     center: txStateWebMercator,
     zoom: 16
+  })
+
+});
+
+var geolocation = new Geolocation({
+// enableHighAccuracy must be set to true to have the heading value.
+  trackingOptions: {
+    enableHighAccuracy: true
+  },
+  projection: view.getProjection()
+});
+
+el('track').addEventListener('change', function() {
+  geolocation.setTracking(this.checked);
+});
+
+geolocation.on('change', function() {
+  el('accuracy').innerText = geolocation.getAccuracy() + ' [m]';
+  el('altitude').innerText = geolocation.getAltitude() + ' [m]';
+  el('altitudeAccuracy').innerText = geolocation.getAltitudeAccuracy() + ' [m]';
+  el('heading').innerText = geolocation.getHeading() + ' [rad]';
+  el('speed').innerText = geolocation.getSpeed() + ' [m/s]';
+});
+
+geolocation.on('error', function(error) {
+  var info = document.getElementById('info');
+  info.innerHTML = error.message;
+  info.style.display = '';
+});
+
+var accuracyFeature = new Feature();
+  geolocation.on('change:accuracyGeometry', function() {
+    accuracyFeature.setGeometry(geolocation.getAccuracyGeometry());
+});
+
+var positionFeature = new Feature();
+  positionFeature.setStyle(new Style({
+    image: new CircleStyle({
+      radius: 6,
+      fill: new Fill({
+        color: '#3399CC'
+    }),
+
+    stroke: new Stroke({
+      color: '#fff',
+      width: 2
+    })
+  })
+}));
+
+geolocation.on('change:position', function() {
+  var coordinates = geolocation.getPosition();
+  positionFeature.setGeometry(coordinates ?
+    new Point(coordinates) : null);
+});
+
+new VectorLayer({
+  map: map,
+  source: new VectorSource({
+    features: [accuracyFeature, positionFeature]
   })
 });
 
