@@ -9,9 +9,13 @@ import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import {OSM, Vector as VectorSource} from 'ol/source.js';
 import {Circle as CircleStyle, Icon, Fill, Stroke, Style} from 'ol/style.js';
 import {fromLonLat, transform} from 'ol/proj';
+import GeoJSON from 'ol/format/GeoJSON';
 
 //navigation imports
 import Polyline from 'ol/format/Polyline';
+
+//geoJSON imports
+import Overlay from 'ol/Overlay';
 
 var txState = [-97.942999, 29.888998];
 var alk = [-97.943114, 29.888868];
@@ -22,10 +26,15 @@ function changeToWebMercator(coord) {
   fromLonLat(coord)
 }
 
+//*****************
+//*****************
+//Navigation variables:
+//*****************
+//*****************
 var points = [],
     msg_el = document.getElementById('msg'),
-    url_osrm_nearest = '//router.project-osrm.org/nearest/v1/driving/',
-    url_osrm_route = '//router.project-osrm.org/route/v1/driving/',
+    url_osrm_nearest = '//router.project-osrm.org/nearest/v1/foot/',
+    url_osrm_route = '//router.project-osrm.org/route/v1/foot/',
     icon_url = '//cdn.rawgit.com/openlayers/ol3/master/examples/data/icon.png'
 
 var vectorSource = new VectorSource()
@@ -48,18 +57,44 @@ var styles = {
       })
     }
 
-console.clear();
+//*****************
+//*****************
+//Building Layer Variables
+//*****************
+//*****************
+/**const buildingLayer = new VectorLayer({
+      source: new VectorSource({
+        format: new GeoJSON(),
+        url: 'buildings.geojson'
+      })
+});
+
+const overlay = new Overlay({
+  element: document.getElementById('popup-container'),
+  positioning: 'bottom-center',
+  offset: [0, -10],
+  autoPan: true
+});**/
+
+
+//*****************
+//*****************
+//Create Map
+//*****************
+//*****************
+
+const baseLayer = new TileLayer({
+  source: new OSM()
+})
 
 var view = new View({
   center: txStateWebMercator,
   zoom: 16
 });
 
-var map = new Map({
+const map = new Map({
   layers: [
-    new TileLayer({
-      source: new OSM()
-    }),
+    baseLayer,
     vectorLayer,
   ],
   target: 'map',
@@ -70,6 +105,13 @@ var map = new Map({
   }),
   view: view
 });
+
+
+//*****************
+//*****************
+//Geolocation variables
+//*****************
+//*****************
 
 var geolocation = new Geolocation({
   // enableHighAccuracy must be set to true to have the heading value.
@@ -132,13 +174,11 @@ new VectorLayer({
   })
 });
 
-function panAlk(){
-  map.setView(new View({
-            center: alkMercator,
-            zoom: 19
-     }));
-
-};
+//*****************
+//*****************
+//Navigation below
+//*****************
+//*****************
 
 map.on('click', function(evt){
   utils.getNearest(evt.coordinate).then(function(coord_street){
@@ -213,4 +253,18 @@ var utils = {
       parseFloat(coord[0]), parseFloat(coord[1])
     ], 'EPSG:3857', 'EPSG:4326');
   }
+};
+
+//*****************
+//*****************
+//Pan to each building (currently doesn't work)
+//*****************
+//*****************
+
+function panAlk(){
+  map.setView(new View({
+            center: alkMercator,
+            zoom: 19
+     }));
+
 };
