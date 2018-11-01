@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>WayPathIO</title>
-    <div id="content">
-      <p>WayPathIO Map</p>
-    </div>
+    <title>Geolocation</title>
+    
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+
     <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
     <div id="map" class="map"></div>
     <div id="info" style="display: none;"></div>
-    
-    <script src="./map.js"></script>
 
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">&#9660</button>
@@ -23,7 +22,7 @@
         <a href="#" onclick="panAcad()" >Academic Services Building South</a>
         <a href="#" onclick="panAcadGar()">Academy Street Garage</a>
         <a href="#" onclick="panAg()">Agriculture</a>
-        <a href="#" onclick="panAlk()">Albert B. Alkek Library</a>
+        <a href="Alkek" onclick="panAlk()">Albert B. Alkek Library</a>
         <a href="#" onclick="panAlk()">Albert B. Alkek Parking Garage</a>
         <a href="#" onclick="panAngel()">Angelina Hall</a>
         <a href="#" onclick="panAqua()">Aqua Sports Center</a>
@@ -131,16 +130,13 @@
     </div>
 
     <label for="track">
-      Track Position:
+      track position
       <input id="track" type="checkbox"/>
     </label>
     <p>
       position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
-      altitude : <code id="altitude"></code>&nbsp;&nbsp;
-      altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
-      heading : <code id="heading"></code>&nbsp;&nbsp;
-      speed : <code id="speed"></code>
+      location : <code id="location"></code>&nbsp;&nbsp;
     </p>
-
+    <script src="./map.js"></script>
   </body>
 </html>
