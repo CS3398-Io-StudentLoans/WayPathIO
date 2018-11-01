@@ -3,10 +3,10 @@
 
 
 //Follow this website for tutorial: https://openlayers.org/en/latest/doc/quickstart.html
-var txState = [-97.942999, 29.888998];
-var tmh = [-97.941480, 29.889306];
-var fh = [ -97.940402, 29.888836];
-var alk = [-97.943114, 29.888868];
+var txState =     [-97.942999, 29.888998];
+var tmh =         [-97.941480, 29.889306];
+var fh =          [ -97.940402, 29.888836];
+var alk =         [-97.943114, 29.888868];
 var acaService =  [ -97.939079, 29.888504];
 var acadStGar =   [ -97.948008, 29.885892];
 var agBuilding =  [ -97.938145, 29.890531 ];

@@ -42,7 +42,7 @@
     <a href="#" onclick="panAcad()">Academic Services Building South</a>
     <a href="#" onclick ="panAcadGar()">Academy Street Garage</a>
 	<a href="#" onclick="panAg()">Agriculture</a>
-	<a href="#" onclick="panAlk()">Albert B. Alkek Library</a>
+      <button href="#" onclick="panAlk()">Albert B. Alkek Library</button>
 	<a href="#"onclick="panAlk()">Albert B. Alkek Parking Garage</a>
 	<a href="#" onclick="panAngel()">Angelina Hall</a>
 	<a href="#"onclick="panAqua()">Aqua Sports Center</a>
@@ -203,11 +203,18 @@ function onClick(id, callback) {
     request.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
             var myObj = JSON.parse(this.responseText);
-            document.getElementById("demo").innerHTML = myObj.name;
+            document.getElementById("demo").innerHTML = myObj.features[2].properties.Bldg_Nam_1;
         }
     };
     request.open("GET", requestURL, true);
     request.send();
+    
+    function getBuildName(int num){
+    var buildName = JSON.parse(this.responseText);
+    return buildName.feature[num].Bldg_Nam_1;
+    }
+    
+    
 </script>
 
 
