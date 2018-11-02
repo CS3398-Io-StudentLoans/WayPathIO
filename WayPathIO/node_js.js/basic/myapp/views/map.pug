@@ -19,6 +19,13 @@ block content
 		</head>
 		<body>
 		<!--<button style="width:50px; height:30px; font-size: 16px; padding:0;position:absolute; top:87px;right:300px;box-sizing:border-box;" type="button" right= 50  onclick=location.href='index.html';>Home</button>-->
+		<!---button for adding information--->
+		<div class="datadropdown">
+			<button class="databtn">+</button>
+			<div class="datadropdown-content">
+				<!--- <form> how busy <br> <input type="radio" name="verybusy"> </form> --->
+			</div>
+		</div>
 		<!---drop down menu-->
 		<div class="dropdown">
 			<button onclick="myFunction()" class="dropbtn">&#9660</button>
@@ -62,6 +69,11 @@ block content
 				function myFunction() {
 				document.getElementById("myDropdown").classList.toggle("show");
 				}
+				
+				function myDataFunction() {
+				document.getElementById("myDataDropdown").classList.toggle("show");
+				}
+				
 				function filterFunction() {
 					var input, filter, ul, li, a, i;
 					input = document.getElementById("myInput");

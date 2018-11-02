@@ -13,6 +13,15 @@ var buildingdataRouter = require('./routes/buildingdata');
 
 var app = express();
 
+
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://brc70:iostudentloans2018!@ds255930.mlab.com:55930/building_data';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
