@@ -13,7 +13,7 @@ var app = express();
 //connect to mongoDB
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://d_l310:swefall2018@ds145563.mlab.com:45563/local_library';
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
