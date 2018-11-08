@@ -22,9 +22,9 @@ To run the map:
   4. Map should be available on localhost:1234.
   
 To use database:
-  1. Use the testing-Brian branch
+  1. Use the development branch
   2. navigate to the testing directory
-  3. run $npm start
+  3. run $npm run watch
   4. Map opens from localhost:3000
   5. Input push into data base is at localhost:3000/form
   6. Output pull from data base is in localhost:3000/registrations   
