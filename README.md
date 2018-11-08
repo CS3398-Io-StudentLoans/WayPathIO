@@ -11,6 +11,15 @@
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
 ## **Running the Code**
-We currently have a static website that can be loaded locally on a browser (1), or viewed online (2). 
-  1. Clone a copy of the "develop" branch of the repository and open index.html in your preferred browser. All of the links and files should load onto your browser.
-  2. Navigate to https://userweb.cs.txstate.edu/~d_l310/waypathio/.
+To run the map:
+  1. Run $npm install ol
+  2. Navigate to the oltest directory.
+  3. Run $npm start
+  4. Map should be available on localhost:1234.
+
+## **Next Steps**
+   * Brian Chamblee
+   * Daniel Le - Integrate shapefiles with map, add navigation features for walking
+   * Jose (Jay) Martinez
+   * Rolando Martinez
+   * Maojun (Brandon) Tian
