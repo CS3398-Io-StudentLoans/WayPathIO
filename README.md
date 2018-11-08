@@ -32,7 +32,7 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Brian Chamblee - 
    * Daniel Le - Integrate shapefiles with map, add navigation features for walking
    * Jose (Jay) Martinez - 
-   * Rolando Martinez - 
+   * Rolando Martinez - Begin implamenting our online database
    * Maojun (Brandon) Tian - Optimizing and addign features to our map page.
    
 
