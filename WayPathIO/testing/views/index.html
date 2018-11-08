@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<link rel="stylesheet" href="styles.css">
+
+<head>
+	<title> WayPathIO </title>
+</head>
+
+<script type="text/javascript">
+	//ismobile
+  	var mobileAgent = new Array("iphone", "ipod", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+  	var browser = navigator.userAgent.toLowerCase();
+  	var isMobile = false;
+  	for(var i = 0; i < mobileAgent.length; i++) {
+   	 if(browser.indexOf(mobileAgent[i]) != -1) {
+    	  isMobile = true; 
+    	  location.href = 'mobile_index.html';
+    	  break;
+   	 }
+  	}
+</script>
+
+<div id="content">
+    <p>&nbsp WayPathIO</a></p>
+</div>
+
+<body id="index">
+	<table>
+		<tr>
+		<td style="padding:0 50px 0 50px;">
+		<a href="images/map.html">
+		<div class="imageholder">
+    <div class="caption">Map</div>
+		<img src="map.png" /style="width:80%;height:auto;">
+		</div>
+		</a>
+	</td>
+	<td style="padding:0 50px 0 50px;">
+		<a href="https://github.com/CS3398-Io-StudentLoans/WayPathIO">
+		<div class="imageholder">
+    <div class="caption">Our Github</div>
+		<img src="github.png" / style="width:80%;height:auto;">
+		</div>
+		</a>
+	</td>
+	<td style="padding:0 50px 0 50px;">
+		<a href="aboutus.html">
+		<div class="imageholder">
+    <div class="caption">What is WayPathIO <style= right: 10%></div>
+		<img src="aboutus.png" / style="width:80%;height:auto;">
+		</div>
+		</a>
+	</td>
+	</tr>
+	</table>
+</body>
+
+</html>

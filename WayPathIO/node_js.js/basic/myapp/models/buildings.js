@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var BuildingSchema = new Schema(
   {
     building_name: {type: String, required: true, max: 100},
-    busy_level: {type: int[]},
+    busy_level: {type: number[]},
     time: {type: Date},
   }
 );
@@ -18,14 +18,14 @@ BuildingSchema
 });
 
 // Virtual for author's lifespan
-AuthorSchema
+BuildingSchema
 .virtual('busy')
 .get(function () {
   return (this.busy_level[0]);
 });
 
 // Virtual for author's URL
-AuthorSchema
+BuildingSchema
 .virtual('time')
 .get(function () {
   return ((this.getHours() * 60) + this.getMinutes());
