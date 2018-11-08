@@ -11,17 +11,30 @@
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
 ## **Status of Project**
-Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
+Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning with mobile friendly sites but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
 
 ## **Running the Code**
-We currently have a static website that can be loaded locally on a browser (1), or viewed online (2). 
-  1. Clone a copy of the "develop" branch of the repository and open index.html in your preferred browser. All of the links and files should load onto your browser.
-  2. Navigate to https://userweb.cs.txstate.edu/~d_l310/waypathio/.
+To run the map:
+  1. Run $npm install ol
+  2. Navigate to the oltest directory.
+  3. Run $npm start
+  4. Map should be available on localhost:1234.
+  
+## **Member Contributions**
+   * Brian Chamblee
+   * Daniel Le - Added Geolocation and Navigation functionalities to the map. This is located in "oltest" folder in develop branch
+   * Jose (Jay) Martinez
+   * Rolando Martinez
+   * Maojun (Brandon) Tian
 
 ## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. We will all go through the tutorial for OpenLayers in order to use it with the Node.js web framework.
-   * Brian Chamblee - add navigation function 
-   * Daniel Le - Figuring out how to get the static website into a dynamic web application.
-   * Jose (Jay) Martinez - addid function to track how busy Alkek is
-   * Rolando Martinez - Change the geolocations of our drop down menu's building list once we've changed our map file.
-   * Maojun (Brandon) Tian - Adding features to the landing page.
+   * Brian Chamblee - 
+   * Daniel Le - Integrate shapefiles with map, add navigation features for walking
+   * Jose (Jay) Martinez - 
+   * Rolando Martinez - 
+   * Maojun (Brandon) Tian - Optimizing and addign features to our map page.
+   
+
+
+

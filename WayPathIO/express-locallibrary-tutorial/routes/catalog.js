@@ -2,10 +2,41 @@ var express = require('express');
 var router = express.Router();
 
 // Require controller modules.
+var building_controller = require('../controllers/buildingController');
+
+
 var book_controller = require('../controllers/bookController');
 var author_controller = require('../controllers/authorController');
 var genre_controller = require('../controllers/genreController');
 var book_instance_controller = require('../controllers/bookinstanceController');
+/// Building Routes///
+
+// GET request for creating a Building. NOTE This must come before routes that display Building (uses id).
+router.get('/building/create', building_controller.building_create_get);
+
+// POST request for creating Building.
+router.post('/building/create', building_controller.building_create_post);
+
+// GET request to delete Building.
+router.get('/building/:id/delete', building_controller.building_delete_get);
+
+// POST request to delete Building.
+router.post('/building/:id/delete', building_controller.building_delete_post);
+
+// GET request to update Building.
+router.get('/building/:id/update', building_controller.building_update_get);
+
+// POST request to update Building.
+router.post('/building/:id/update', building_controller.building_update_post);
+
+// GET request for one Building.
+router.get('/building/:id', building_controller.building_detail);
+
+// GET request for list of all Building items.
+router.get('/buildings', building_controller.building_list);
+
+
+
 
 /// BOOK ROUTES ///
 

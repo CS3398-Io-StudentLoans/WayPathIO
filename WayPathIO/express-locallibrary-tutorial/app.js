@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var mapRouter = require('./routes/map');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
@@ -12,7 +13,7 @@ var app = express();
 
 //connect to mongoDB
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://d_l310:swefall2018@ds145563.mlab.com:45563/local_library';
+var mongoDB = 'mongodb://user:password1@ds145563.mlab.com:45563/waypathio';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/map', mapRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 // catch 404 and forward to error handler

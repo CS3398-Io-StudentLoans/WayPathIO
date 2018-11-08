@@ -14,7 +14,7 @@ var Book = require('./models/book')
 var Author = require('./models/author')
 var Genre = require('./models/genre')
 var BookInstance = require('./models/bookinstance')
-
+var Building = require('./models/building')
 
 var mongoose = require('mongoose');
 var mongoDB = userArgs[0];
@@ -27,6 +27,7 @@ var authors = []
 var genres = []
 var books = []
 var bookinstances = []
+var buildings = []
 
 function authorCreate(first_name, family_name, d_birth, d_death, cb) {
   authordetail = {first_name:first_name , family_name: family_name }
@@ -43,6 +44,24 @@ function authorCreate(first_name, family_name, d_birth, d_death, cb) {
     console.log('New Author: ' + author);
     authors.push(author)
     cb(null, author)
+  }  );
+}
+
+function buildingCreate(building_name, busy_level, cb) {
+  buildingdetail = {building_name:building_name}
+ // buildingdetail.busy_level = busy_level
+  
+  
+  var building = new Building(buildingdetail);
+       
+  building.save(function (err) {
+    if (err) {
+      cb(err, null)
+      return
+    }
+    console.log('New Building: ' + building);
+    buildings.push(building)
+    cb(null, building)
   }  );
 }
 
@@ -101,6 +120,37 @@ function bookInstanceCreate(book, imprint, due_back, status, cb) {
     bookinstances.push(bookinstance)
     cb(null, book)
   }  );
+}
+
+function createBuildings(cb) {
+    async.parallel([
+        function(callback) {
+          buildingCreate('Alkek', '5', callback);
+        },
+        function(callback) {
+          authorCreate('Comal', '4', callback);
+        },
+        function(callback) {
+          authorCreate('Flowers', '3', callback);
+        },
+        function(callback) {
+          authorCreate('LBJ', '2', callback);
+        },
+        function(callback) {
+          authorCreate('Gym', '1', callback);
+        },
+        function(callback) {
+          genreCreate('Pool', '3', callback);
+        },
+        function(callback) {
+          genreCreate('Stadium', '4', callback);
+        },
+        function(callback) {
+          genreCreate('Jones', '5', callback);
+        },
+        ],
+        // optional callback
+        cb);
 }
 
 
@@ -208,6 +258,7 @@ function createBookInstances(cb) {
 
 
 async.series([
+	createBuildings,
     createGenreAuthors,
     createBooks,
     createBookInstances
