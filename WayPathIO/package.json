@@ -1,0 +1,17 @@
+{
+  "name": "waypathio",
+  "version": "1.0.0",
+  "main": "test.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jade": "^1.11.0",
+    "ol": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
