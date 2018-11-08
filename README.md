@@ -33,7 +33,7 @@ To use database:
    * Brian Chamblee - Worked on backend development and linked to the front end created a server and database for our project. testing folder in the testing-Brian branch
    * Daniel Le - Added Geolocation and Navigation functionalities to the map. This is located in "oltest" folder in develop branch
    * Jose (Jay) Martinez
-   * Rolando Martinez - Worked 
+   * Rolando Martinez - Worked on getting buttons to pull from mangodb
    * Maojun (Brandon) Tian - Mobile Optimization
 
 ## **Next Steps**
