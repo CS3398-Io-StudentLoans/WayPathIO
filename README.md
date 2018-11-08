@@ -25,7 +25,7 @@ To run the map:
    * Daniel Le - Added Geolocation and Navigation functionalities to the map. This is located in "oltest" folder in develop branch
    * Jose (Jay) Martinez
    * Rolando Martinez
-   * Maojun (Brandon) Tian
+   * Maojun (Brandon) Tian - mobile optimization
 
 ## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. We will all go through the tutorial for OpenLayers in order to use it with the Node.js web framework.
@@ -33,7 +33,7 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Daniel Le - Integrate shapefiles with map, add navigation features for walking
    * Jose (Jay) Martinez - 
    * Rolando Martinez - 
-   * Maojun (Brandon) Tian - Optimizing and addign features to our map page.
+   * Maojun (Brandon) Tian - Optimizing and adding features to our map page.
    
 
 
