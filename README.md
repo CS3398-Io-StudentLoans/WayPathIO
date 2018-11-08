@@ -11,7 +11,7 @@
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
 ## **Status of Project**
-Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
+Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning with mobile friendly sites but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
 
 ## **Running the Code**
 We currently have a static website that can be loaded locally on a browser (1), or viewed online (2). 
@@ -24,4 +24,4 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Daniel Le - Figuring out how to get the static website into a dynamic web application.
    * Jose (Jay) Martinez - addid function to track how busy Alkek is
    * Rolando Martinez - Change the geolocations of our drop down menu's building list once we've changed our map file.
-   * Maojun (Brandon) Tian - Adding features to the landing page.
+   * Maojun (Brandon) Tian - Optimizing and addign features to our map page.
