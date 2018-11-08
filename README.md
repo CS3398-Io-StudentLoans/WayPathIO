@@ -10,6 +10,13 @@
    
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
+## **Member Contributions**
+   * Brian Chamblee
+   * Daniel Le - Added Geolocation and Navigation functionalities to the map. This is located in "oltest" folder in develop branch
+   * Jose (Jay) Martinez
+   * Rolando Martinez
+   * Maojun (Brandon) Tian
+
 ## **Running the Code**
 To run the map:
   1. Run $npm install ol
