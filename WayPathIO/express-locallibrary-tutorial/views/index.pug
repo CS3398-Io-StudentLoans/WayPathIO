@@ -1,7 +1,7 @@
-extends layout
+
 
 block content
-  h1= title
+  <!---h1= title
   p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
 
   h1 Dynamic content
@@ -16,4 +16,63 @@ block content
       li #[strong Copies:] !{data.book_instance_count}
       li #[strong Copies available:] !{data.book_instance_available_count} 
       li #[strong Authors:] !{data.author_count}
-      li #[strong Genres:] !{data.genre_count}
+      li #[strong Genres:] !{data.genre_count}--->
+      html.
+       <link rel="stylesheet" href="stylesheets/styles.css">
+        <head>
+         <title> WayPathIO </title>
+          </head>
+           <script type="text/javascript">
+            //ismobile
+             var mobileAgent = new Array("iphone", "ipod", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+             var browser = navigator.userAgent.toLowerCase();
+             var isMobile = false;
+             for(var i = 0; i < mobileAgent.length; i++) {
+             if(browser.indexOf(mobileAgent[i]) != -1) {
+             isMobile = true; 
+             location.href = 'mobile_index.html';
+             break;
+             }
+             }
+             </script>
+             	<div id="content">
+             		<p>&nbsp WayPathIO</a></p>
+             			</div>
+             			<body id="index">
+             			<table>
+             			<tr>
+             			<td style="padding:0 50px 0 50px;">
+             			<a href="/map">
+             			<div class="imageholder">
+             			<div class="caption">Map</div>
+             			<img src='images/map.png' /style="width:80%;height:auto;">
+             			</div>
+             			<!--  <h2><span>Map</span></h2> -->
+             			</a>
+             			</td>
+             			<td style="padding:0 50px 0 50px;">
+             			<a href="https://github.com/CS3398-Io-StudentLoans/WayPathIO">
+             			<div class="imageholder">
+             			<div class="caption">Our Github</div>
+             			<img src="/images/github.png" / style="width:80%;height:auto;">
+             			</div>
+             			<!-- ><h2><span>Our github</span></h2> -->
+             			</a>
+             			</td>
+             			<td style="padding:0 50px 0 50px;">
+             			<a href="/aboutus">
+             			<div class="imageholder">
+             			<div class="caption">What is WayPathIO <style= right: 10%></div>
+             			<img src="/images/aboutus.png" / style="width:80%;height:auto;">
+             			</div>
+             			<!--	<h2><span>what is WayPathIO</span></h2> -->
+             			</a>
+             			</td>
+             			</tr>
+             			</table>
+             			<script>
+             			var browser = navigator.userAgent;
+             			document.write(browser);
+             			</script>
+             			</body>
+			

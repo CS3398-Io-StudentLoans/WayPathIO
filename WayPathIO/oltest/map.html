@@ -2,19 +2,45 @@
 <html>
   <head>
     <title>Geolocation</title>
+    <div id="content">
+    <p><a href="#">&nbsp WayPathIO Map</a></p>
+</div>
     
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-
+	<script type="text/javascript" src="./locations.js"></script>
     <link rel="stylesheet" href="styles.css">
 
   </head>
   <body>
-    <div id="msg">Click to add a point.</div>
+    <div  id="msg" style = "top: 100 px" >Click to add a point.</div>
     <div id="map" class="map"></div>
     <div id="info" style="display: none;"></div>
+    <script>
+    function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				}
+				
+				function myDataFunction() {
+				document.getElementById("myDataDropdown").classList.toggle("show");
+				}
+				
+				function filterFunction() {
+					var input, filter, ul, li, a, i;
+					input = document.getElementById("myInput");
+					filter = input.value.toUpperCase();
+					div = document.getElementById("myDropdown");
+					a = div.getElementsByTagName("a");
+					for (i = 0; i < a.length; i++) {
+						if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							a[i].style.display = "";
+						} else {
+							a[i].style.display = "none";
+						}
+					}
+				}
     
-    
+    </script>
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">&#9660</button>
       <div id="myDropdown" class="dropdown-content">
@@ -131,14 +157,15 @@
       </div>
     </div>
 
-    <label for="track">
+    <label for="track" class ="overlay">
       track position
       <input id="track" type="checkbox"/>
     </label>
-    <p>
+    <p class="overlay">
       position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
       location : <code id="location"></code>&nbsp;&nbsp;
     </p>
     <script src="./map.js"></script>
+    
   </body>
 </html>

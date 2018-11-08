@@ -1,13 +1,36 @@
 .map {
         height: 100%;
         width: 100%;
+        position: relative;
       }
-/*#index {
-    background: url('test.jpg') no-repeat center center fixed;
+.overlay{
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 5%;
+  
+  background-color:white; /*dim the background*/
 }
-body{
-    background: url('test.jpg') no-repeat center center fixed;
-}*/
+
+#msg{
+    position: absolute;
+    z-index: 10;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 5px);
+    background-color: rgba(40,40,40,.8);
+    padding: 10px;
+    color: #eee;
+    width: 350px;
+    text-align: center;
+}
+.ol-control button{ 
+  background-color: rgba(40, 40, 40, 0.85) !important;
+}
+.ol-control button:hover{ 
+  background-color: rgba(40, 40, 40, 1) !important;
+}
 
 /*border on top */
 #content, #right {
@@ -39,7 +62,6 @@ body{
     vertical-align: middle;
     float:left;
 }
-
 
 a {
 	color : white;
