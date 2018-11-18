@@ -9,6 +9,9 @@ const router = express.Router();
 
 const Registration = mongoose.model('Registration');
 
+//to use html in views file using ejs
+exports.index = function(req, res){
+res.render('index', { title: 'ejs' });};
 
 router.get('/registrations', (req, res) => {
   Registration.find()
