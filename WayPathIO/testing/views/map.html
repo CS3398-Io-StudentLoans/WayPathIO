@@ -157,8 +157,11 @@
     <label for="name"><b>Building Name</b></label>
     <input type="text" placeholder="Enter Building Name" name="name" required>
 	<br>
-    <label for="busy"><b>Busy Level</b></label>
-    <input type="number" placeholder="Enter Busy Level" name="busy" required>
+  <label for="busy"><b>Busy Level</b></label><br>
+    <input type="radio" class="form-radio" style="background-color:green" name="busy" value="1">
+    <input type="radio" class="form-radio" style="background-color:yellow" name="busy" value="2">
+    <input type="radio" class="form-radio" style="background-color:red" name="busy" value="3">
+    <!---<input type="number" placeholder="Enter Busy Level" name="busy" required>--->
 	<br><br>
     <button type="submit" class="dropbtn" style="width: 100%" >Submit</button>
     <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
