@@ -150,20 +150,22 @@
 
 </div> 
 
-<button class="dropbtn" style="bottom: 1% ; left: 1% ; font-size: 1em; position:absolute" id="show_button" onclick="openForm()">&#11044</button>
+<button class="dropbtn" style="bottom: 1% ; left: 1% ; font-size: 1em; position:absolute" id="show_button" onclick="openForm(); Date()">&#11044</button>
 <div class="form-popup" id="myForm">
   <form action="/" method="post" class="form-container">
 
     <label for="name"><b>Building Name</b></label>
-    <input type="text" placeholder="Enter Building Name" name="name" required>
+    
+    <input id="name" placeholder="Enter Building Name" name="name" required >
 	<br>
   <label for="busy"><b>Busy Level</b></label><br>
-    <input type="radio" class="form-radio" style="background-color:green" name="busy" value="1">
-    <input type="radio" class="form-radio" style="background-color:yellow" name="busy" value="2">
-    <input type="radio" class="form-radio" style="background-color:red" name="busy" value="3">
+    <input type="radio" class="form-radio" style="background-color:green" name="busy" value="1" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:yellow" name="busy" value="2" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:red" name="busy" value="3" onclick="this.form.submit();">
     <!---<input type="number" placeholder="Enter Busy Level" name="busy" required>--->
 	<br><br>
-    <button type="submit" class="dropbtn" style="width: 100%" >Submit</button>
+	<input style="display: none" id="time" name="time">
+    <!--<button type="submit" class="dropbtn" style="width: 100%" >Submit</button>-->
     <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
   </form>
 
@@ -175,6 +177,22 @@
         document.getElementById('hidden-div').style.display = 'block'; 
         this.style.display = 'none'
     }   
+    
+function time() {
+	var d = new Date();
+	var h = d.getHours();
+	var m = d.getMinutes();
+	var t = (h*60) + m ;
+	
+	return t;
+	}
+
+
+  document.getElementById('time').value = time();
+  
+  document.getElementById('name').value = "Alkek";
+  
+
 </script>
 
 

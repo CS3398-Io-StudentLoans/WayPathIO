@@ -9,6 +9,10 @@ const registrationSchema = new mongoose.Schema({
     type: Number,
     trim: true,
   },
+  time: {
+    type: String,
+    trim: true,
+  },
 });
 
 module.exports = mongoose.model('Registration', registrationSchema);

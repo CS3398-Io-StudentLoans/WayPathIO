@@ -30,6 +30,7 @@ router.get('/form', (req, res) => {
 });
 
 
+
 //getting data
 router.get('/', (req, res) => {
   res.render('map', {title: 'Map'});
