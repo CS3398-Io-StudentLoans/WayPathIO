@@ -53,7 +53,7 @@ router.post('/',
     if (errors.isEmpty()) {
   const registration = new Registration(req.body);
   registration.save()
-    .then(() => { res.send('Thank you for your registration!'); })
+    .then(() => { res.render('map', {title: 'Map'}); })
     .catch(() => { res.send('Sorry! Something went wrong.'); });
 } else {
       res.render('map', {

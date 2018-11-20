@@ -149,7 +149,42 @@
 
 
 </div> 
+
+<button class="dropbtn" style="bottom: 1% ; left: 1% ; font-size: 1em; position:absolute" id="show_button" onclick="openForm()">&#11044</button>
+<div class="form-popup" id="myForm">
+  <form action="/" method="post" class="form-container">
+
+    <label for="name"><b>Building Name</b></label>
+    <input type="text" placeholder="Enter Building Name" name="name" required>
+	<br>
+    <label for="busy"><b>Busy Level</b></label>
+    <input type="number" placeholder="Enter Busy Level" name="busy" required>
+	<br><br>
+    <button type="submit" class="dropbtn" style="width: 100%" >Submit</button>
+    <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
+  </form>
+
+<script type="text/javascript">
+    var button = document.getElementById('show_button')
+    button.addEventListener('click',hideshow,false);
+
+    function hideshow() {
+        document.getElementById('hidden-div').style.display = 'block'; 
+        this.style.display = 'none'
+    }   
+</script>
+
+
 <script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
+
 // animations stutter on mobile or slow devices.
    
 /* When the user clicks on the button,
@@ -173,22 +208,8 @@ function filterFunction() {
         }
     }
 }
-    
-//onclick function that's supposed to make the drop down buttons
-    
-/*    
-function onClick(id, callback) {
-    document.getElementById(id).addEventListener('click', callback);
-    }
 
-    onClick('pan-to-london', function() {
-    view.animate({
-      center: txStateWebMercator1,
-      duration: 2000
-    });
-});
-*/
-// Improve us
+
 </script>
 
 
