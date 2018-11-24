@@ -1,84 +1,36 @@
 .map {
         height: 100%;
         width: 100%;
+        position: relative;
       }
-      
-      
-/* pop up form submission form */
- {box-sizing: border-box;}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
+.overlay{
   position: absolute;
-  bottom: 23px;
-  left: 28px;
-  width: 280px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 30%;
-  left: 38%;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 400px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 90%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
+  top: 100%;
+  left: 0px;
   width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  height: 5%;
+  
+  background-color:white; /*dim the background*/
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
+#msg{
+    position: absolute;
+    z-index: 10;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 5px);
+    background-color: rgba(40,40,40,.8);
+    padding: 10px;
+    color: #eee;
+    width: 350px;
+    text-align: center;
 }
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-} 
-
-/* end of submission form*/
-
-      
+.ol-control button{ 
+  background-color: rgba(40, 40, 40, 0.85) !important;
+}
+.ol-control button:hover{ 
+  background-color: rgba(40, 40, 40, 1) !important;
+}
 
 /*border on top */
 #content, #right {
@@ -111,7 +63,6 @@
     float:left;
 }
 
-
 a {
 	color : white;
 	text-decoration: none;
@@ -119,77 +70,6 @@ a {
 
 
 /*.suggestionsBox {position:absolute; top:40px;}*/
-
-/*data button*/
-.databtn {
-
-	background-color:  #667399;
-    opacity : 0.9;
-    padding: 13px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: 2px solid white;
-    border-radius: 6px;
-    cursor: pointer;
-    width:50px;
-}
-
-
-.databtn:hover, .databtn:focus {
-    background-color:  #3e4c74;
-}
-
-.datadropdown {
-    position: absolute;
-    top: 95px ;
-  	left: 17px ;
-    display: inline-block;
-}
-
-.datadropdown-content {
-	
-    display: none;
-    position: absolute;
-    background-color: #000;
-    background: transparent;
-    width: 500px;
-    height: 400px;
-    overflow: auto;
-    border: 0px solid #ddd;
-    z-index: 1;
-    overflow-y: scroll;
-}
-
-.datadropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    left: 0;
-}
-.datadropdown-content form {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    left: 0;
-}
-.datadropdown-content button {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    left: 0;
-}
-.datadropdown a:hover {background-color: #ddd;}
-.datadropdown button:hover {background-color: #ddd;}
-
-
-.dropdown form:hover {background-color: #ddd;}
-
-.datadropdown:hover .datadropdown-content {display: block;}
-
 
  /* Dropdown Button */
 .dropbtn {
@@ -212,7 +92,7 @@ a {
 
 #myInput {
     border-box: box-sizing;
-    background-image: url('/images/search.png');
+    background-image: url('images/search.png');
     background-position: 7px 10px;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -255,10 +135,6 @@ a {
 .dropdown a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-
-/* end of drop down */
-
-
 
 .show {display: block;}
 
@@ -334,54 +210,4 @@ table img {
     color: white;
     padding: 10px;
 }
-
-
-/* radio form buttons*/
-.form-radio
-{
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-     display: inline-block;
-     position: relative;
-     background-color: #f1f1f1;
-     color: black;
-     top: 10px;
-     left: 0px ;
-     height: 90px;
-     width: 90px;
-     border: 10px;
-     border-radius: 6px;
-     cursor: pointer;     
-     margin-right: 7px;
-     outline: 2 px;
-}
-.form-radio:checked::before
-{
-     position: absolute;
-     font: 100px/1 'Open Sans', sans-serif;
-     left: 0%;
-     top: 0%;
-
-     content: '';
-     transform: rotate(0deg);
-}
-.form-radio:hover
-{
-     background-color: #f7f7f7;
-}
-.form-radio:checked
-{
-     background-color: #f1f1f1;
-     outline: 2 px ;
-     box-shadow: 0 0 0 5px black
-}
-
-
-label
-{
-     font: 300 16px/1.7 'Open Sans', sans-serif;
-     color: #666;
-     cursor: pointer;
-} 
 
