@@ -95,17 +95,23 @@ var chautHallMercator = ol.proj.fromLonLat(chautHall);
 var chemMercator = ol.proj.fromLonLat(chem);
 var blanHallMercator = ol.proj.fromLonLat(blanHall);
 var blancoParkMercator = ol.proj.fromLonLat(blancoPark);
-var mathhMercator = ol.proj.fromLonLat(matth);
+var matthMercator = ol.proj.fromLonLat(matth);
 var medinaMercator = ol.proj.fromLonLat(medina);
 var moellMercator = ol.proj.fromLonLat(moell);
+var musicMercator = ol.proj.fromLonLat(music);
 var nuecMercator = ol.proj.fromLonLat(nuec);
 var olMainMercator = ol.proj.fromLonLat(olMain);
+var pecosMercator = ol.proj.fromLonLat(pecos);
+var outCentMercator = ol.proj.fromLonLat(outCent);
+
 var pecosMercator = ol.proj.fromLonLat(pecos);
 var pederMercator = ol.proj.fromLonLat(peder);
 var perfArtsCMercator = ol.proj.fromLonLat(perfArtsC);
 var phyPlantMercator = ol.proj.fromLonLat(phyPlant);
 var plStGarMercator = ol.proj.fromLonLat(plStGar);
 var recycCentMercator = ol.proj.fromLonLat(recycCent);
+var resGreenHouseMercator = ol.proj.fromLonLat(resGreenhouse);
+
 var retamaHallMercator = ol.proj.fromLonLat(retamaHall);
 var racuacMercator = ol.proj.fromLonLat(racuac);
 var riverHMercator = ol.proj.fromLonLat(riverH);
@@ -128,11 +134,13 @@ var swinnGueHMercator = ol.proj.fromLonLat(swinnGueH);
 var swinnHMercator = ol.proj.fromLonLat(swinnH);
 var tennisCentMercator = ol.proj.fromLonLat(tennisCent);
 var towerMercator = ol.proj.fromLonLat(tower);
+var theaterCentMercator = ol.proj.fromLonLat(theaterCent);
 var trackFieldFacMercator = ol.proj.fromLonLat(trackFielFac);
 var trinityMercator = ol.proj.fromLonLat(trinity);
 var undAcCentMercator = ol.proj.fromLonLat(undAcCent);
+var undAcCentMercator = ol.proj.fromLonLat(undAcCent);
 var woodsStGarMercator = ol.proj.fromLonLat(woodsStGar);
-
+var rotcMercator = ol.proj.fromLonLat(rotc);
 function changeToWebMercator(coord) {
   ol.proj.fromLonLat(coord)
 }
@@ -341,15 +349,299 @@ function panTmh(){
 
 
 //----------------------------------------------------
-      function pan(){
+      function panmatth(){
   map.setView(new ol.View({
-            center: ,
+            center: matthMercator,
+            zoom: 19
+     }));
+};
+
+      function panmedina(){
+  map.setView(new ol.View({
+            center: medinaMercator,
+            zoom: 19
+     }));
+};
+
+      function panmoell(){
+  map.setView(new ol.View({
+            center: moellMercator,
+            zoom: 19
+     }));
+};
+
+      function panmusic(){
+  map.setView(new ol.View({
+            center: musicMercator,
+            zoom: 19
+     }));
+};
+
+      function pannuece(){
+  map.setView(new ol.View({
+            center: nuecMercator,
+            zoom: 19
+     }));
+};
+
+      function panolMain(){
+  map.setView(new ol.View({
+            center: olMainMercator,
+            zoom: 19
+     }));
+};
+
+      function panoutCent(){
+  map.setView(new ol.View({
+            center: outCentMercator,
             zoom: 19
      }));
 };
 
 
+      function panpecos(){
+  map.setView(new ol.View({
+            center: pecosMercator,
+            zoom: 19
+     }));
+};
 
+      function panpeder(){
+  map.setView(new ol.View({
+            center: pederMercator,
+            zoom: 19
+     }));
+};
+
+      function panperfArtsC(){
+  map.setView(new ol.View({
+            center: perfArtsCMercator,
+            zoom: 19
+     }));
+};
+
+      function panphyPlant(){
+  map.setView(new ol.View({
+            center: phyPlantMercator,
+            zoom: 19
+     }));
+};
+
+      function panplStGar(){
+  map.setView(new ol.View({
+            center: plStGarMercator,
+            zoom: 19
+     }));
+};
+
+      function panrecycCent(){
+  map.setView(new ol.View({
+            center: recycCentMercator,
+            zoom: 19
+     }));
+};
+
+      function panresGreenhouse(){
+  map.setView(new ol.View({
+            center: resGreenHouseMercator,
+            zoom: 19
+     }));
+};
+
+      function panretamaHall(){
+  map.setView(new ol.View({
+            center: retamaHallMercator,
+            zoom: 19
+     }));
+};
+
+      function panracuac(){
+  map.setView(new ol.View({
+            center: racuacMercator,
+            zoom: 19
+     }));
+};
+
+      function panriverH(){
+  map.setView(new ol.View({
+            center: riverHMercator,
+            zoom: 19
+     }));
+};
+
+      function panroyFMitte(){
+  map.setView(new ol.View({
+            center: royFMitteMercator,
+            zoom: 19
+     }));
+};
+
+      function pansabinal(){
+  map.setView(new ol.View({
+            center: sabinalMercator,
+            zoom: 19
+     }));
+};
+
+      function pansanGabH(){
+  map.setView(new ol.View({
+            center: sanGabHMercator,
+            zoom: 19
+     }));
+};
+      function pansanJacH(){
+  map.setView(new ol.View({
+            center: sanJacHMercator,
+            zoom: 19
+     }));
+};
+      function pansanMarcH(){
+  map.setView(new ol.View({
+            center: sanMarcHMercator,
+            zoom: 19
+     }));
+};
+
+      function pansayersH(){
+  map.setView(new ol.View({
+            center: sayersHMercator,
+            zoom: 19
+     }));
+};
+
+      function panscieGreenH(){
+  map.setView(new ol.View({
+            center: scieGreenHMercator,
+            zoom: 19
+     }));
+};
+
+      function pansmithHall(){
+  map.setView(new ol.View({
+            center: smithHallMercator,
+            zoom: 19
+     }));
+};
+
+      function pansmithHouse(){
+  map.setView(new ol.View({
+            center: smithHouseMercator,
+            zoom: 19
+     }));
+};
+
+      function panspeckStGar(){
+  map.setView(new ol.View({
+            center: speckStGarMercator,
+            zoom: 19
+     }));
+};
+
+      function pansprLakeH(){
+  map.setView(new ol.View({
+            center: sprLakeHMercator,
+            zoom: 19
+     }));
+};
+
+      function pansterryH(){
+  map.setView(new ol.View({
+            center: sterryHMercator,
+            zoom: 19
+     }));
+};
+
+      function panstraColis(){
+  map.setView(new ol.View({
+            center: straColisMercator,
+            zoom: 19
+     }));
+};
+
+      function pandarBCAdminCom(){
+  map.setView(new ol.View({
+            center: darBCAdminComMercator,
+            zoom: 19
+     }));
+};
+
+      function panstudHealth(){
+  map.setView(new ol.View({
+            center: studHealthMercator,
+            zoom: 19
+     }));
+};
+
+      function panswinnGueH(){
+  map.setView(new ol.View({
+            center: swinnGueHMercator,
+            zoom: 19
+     }));
+};
+
+      function panswinnH(){
+  map.setView(new ol.View({
+            center: swinnHMercator,
+            zoom: 19
+     }));
+};
+
+      function pantennisCent(){
+  map.setView(new ol.View({
+            center: tennisCentMercator,
+            zoom: 19
+     }));
+};
+
+      function pantower(){
+  map.setView(new ol.View({
+            center: towerMercator,
+            zoom: 19
+     }));
+};
+
+      function pantheaterCent(){
+  map.setView(new ol.View({
+            center: theaterCentMercator,
+            zoom: 19
+     }));
+};
+
+      function pantrackFieldFac(){
+  map.setView(new ol.View({
+            center: trackFieldFacMercator,
+            zoom: 19
+     }));
+};
+
+      function pantrinity(){
+  map.setView(new ol.View({
+            center: trinityMercator,
+            zoom: 19
+     }));
+};
+
+      function panunderAcCent(){
+  map.setView(new ol.View({
+            center: undAcCentMercator,
+            zoom: 19
+     }));
+};
+
+      function panrotc(){
+  map.setView(new ol.View({
+            center: rotcMercator,
+            zoom: 19
+     }));
+};
+
+
+      function panwoodsStGar(){
+  map.setView(new ol.View({
+            center: woodsStGarMercator,
+            zoom: 19
+     }));
+};
 
 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
