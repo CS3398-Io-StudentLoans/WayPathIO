@@ -24,9 +24,50 @@ var centHall =    [ -97.940008, 29.889653 ];
 var centerStuRet =[ -97.940278, 29.885636 ];
 var chautHall =   [ -97.946845, 29.890479 ];
 var chem =        [ -97.939451, 29.889599 ];
-
-
-
+var matth =       [ -97.943796, 29.890784 ];
+var medina =      [ -97.939826, 29.890377 ]; 
+var moell =       [ -97.948109, 29.884837 ];
+var music =       [ -97.940843, 29.890909 ];
+var nuec =        [ -97.941276, 29.888188 ];
+var olMain =      [ -97.939102, 29.889381 ];
+var outCent =     [ -97.933731, 29.887375 ];
+var pecos =       [ -97.940164, 29.890964 ];
+var peder =       [ -97.940119, 29.890731 ];
+var perfArtsCent =[ -97.938820, 29.886109 ];
+var phyPlant =    [ -97.938038, 29.891436 ];
+var pleasStParking=[ -97.940803, 29.890021 ];
+var recycCent =   [ -97.948965, 29.884992 ];
+var resGreenhouse = [ -97.946763, 29.886503 ];
+var retamaHall =  [  29.887851, -97.941242 ];
+var racuac =      [ -97.942547, 29.886328 ];
+var riverH =      [ -97.93625, 29.885801 ];
+var royFMitte =   [ -97.947123, 29.888879 ];
+var sabinal =     [ -97.939576, 29.891105 ];
+var sanGabH =     [ -97.953858, 29.889750 ];
+var sanJacH =     [ -97.943878, 29.886764 ];
+var sanMarcH =    [ -97.943868,  29.886784 ];
+var sayersH =     [ -97.951034, 29.886348 ];
+var scieGreenh=   [ -97.946467, 29.887540 ];
+var smithHall =   [ -97.942855, 29.890268 ];
+var smithHouse =  [  -97.951299, 29.885474 ];
+var speckStGar =  [ -97.952777, 29.890495 ];
+var sprLakeH =    [ -97.930158, 29.894201 ];
+var sterryH =     [ -97.939974, 29.886414 ];
+var straColis =   [ -97.925840, 29.891505 ];
+var darBCAdminCom= [ -97.931873, 29.889022 ];
+var studHealth =  [ -97.946237, 29.890695 ];
+var studRec =     [ -97.950640,  29.888897 ];
+var swinnGueH =   [ -97.946126, 29.886439 ];
+var swinnH =      [ -97.946126, 29.886439 ];
+var tayMurph =    [ -97.941467, 29.889335 ];
+var tennisCent =  [ -97.935858,  29.891030 ];
+var theTower =    [ -97.943124,  29.886984 ];
+var theaterCent = [ -97.937383,  29.886958 ];
+var trackFielFac= [ -97.922248, 29.891394 ];
+var trinity =     [ -97.939773, 29.890966 ];
+var undAcCent =   [ -97.942614, 29.888031 ];
+var rotc =        [ -97.950180, 29.887425 ];
+var woodsStGar =  [ -97.943903, 29.887520 ];
 
 //var txStateWebMercator1 = ol.proj.fromLonLat(tmh);
 var txStateWebMercator = ol.proj.fromLonLat(txState);
@@ -262,6 +303,18 @@ function panTmh(){
             zoom: 19
      }));
 };
+
+
+//----------------------------------------------------
+      function pan(){
+  map.setView(new ol.View({
+            center: ,
+            zoom: 19
+     }));
+};
+
+
+
 
 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
