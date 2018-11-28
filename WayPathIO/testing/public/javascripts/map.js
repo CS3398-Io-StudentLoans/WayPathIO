@@ -38,7 +38,7 @@ var phyPlant =    [ -97.938038, 29.891436 ];
 var plStGar=      [ -97.940803, 29.890021 ];
 var recycCent =   [ -97.948965, 29.884992 ];
 var resGreenhouse = [ -97.946763, 29.886503 ];
-var retamaHall =  [  29.887851, -97.941242 ];
+var retamaHall =  [  -97.941242, 29.887851 ];
 var racuac =      [ -97.942547, 29.886328 ];
 var riverH =      [ -97.93625, 29.885801 ];
 var royFMitte =   [ -97.947123, 29.888879 ];
@@ -55,6 +55,7 @@ var sprLakeH =    [ -97.930158, 29.894201 ];
 var sterryH =     [ -97.939974, 29.886414 ];
 var straColis =   [ -97.925840, 29.891505 ];
 var darBCAdminCom=[ -97.931873, 29.889022 ];
+var straH =       [ -97.949653, 29.885564 ];
 var studHealth =  [ -97.946237, 29.890695 ];
 var studRec =     [ -97.950640, 29.888897 ];
 var swinnGueH =   [ -97.946126, 29.886439 ];
@@ -62,7 +63,9 @@ var swinnH =      [ -97.946126, 29.886439 ];
 var tayMurph =    [ -97.941467, 29.889335 ];
 var tennisCent =  [ -97.935858, 29.891030 ];
 var tower =       [ -97.943124, 29.886984 ];
+var towerGar =    [ -97.942642, 29.887021 ];
 var theaterCent = [ -97.937383, 29.886958 ];
+var thronInt =    [ -97.946489, 29.887052 ];
 var trackFielFac= [ -97.922248, 29.891394 ];
 var trinity =     [ -97.939773, 29.890966 ];
 var undAcCent =   [ -97.942614, 29.888031 ];
@@ -134,6 +137,7 @@ var swinnGueHMercator = ol.proj.fromLonLat(swinnGueH);
 var swinnHMercator = ol.proj.fromLonLat(swinnH);
 var tennisCentMercator = ol.proj.fromLonLat(tennisCent);
 var towerMercator = ol.proj.fromLonLat(tower);
+var towerGarMercator = ol.proj.fromLonLat(towerGar);
 var theaterCentMercator = ol.proj.fromLonLat(theaterCent);
 var trackFieldFacMercator = ol.proj.fromLonLat(trackFielFac);
 var trinityMercator = ol.proj.fromLonLat(trinity);
@@ -141,6 +145,10 @@ var undAcCentMercator = ol.proj.fromLonLat(undAcCent);
 var undAcCentMercator = ol.proj.fromLonLat(undAcCent);
 var woodsStGarMercator = ol.proj.fromLonLat(woodsStGar);
 var rotcMercator = ol.proj.fromLonLat(rotc);
+var retamaHallMecator = ol.proj.fromLonLat(retamaHall);
+var straHMecator = ol.proj.fromLonLat(straH);
+var thronIntMecator = ol.proj.fromLonLat(thronInt);
+
 function changeToWebMercator(coord) {
   ol.proj.fromLonLat(coord)
 }
@@ -643,6 +651,40 @@ function panTmh(){
      }));
 };
 
+      function pantowerGar(){
+  map.setView(new ol.View({
+            center: towerGarMercato,
+            zoom: 19
+     }));
+};
+
+      function panrotc(){
+  map.setView(new ol.View({
+            center: rotcMercator,
+            zoom: 19
+     }));
+};
+
+      function panretamaHall(){
+  map.setView(new ol.View({
+            center: retamaHallMecator,
+            zoom: 19
+     }));
+};
+
+      function panstraH(){
+  map.setView(new ol.View({
+            center: straHMecator,
+            zoom: 19
+     }));
+};
+
+      function panthronInt(){
+  map.setView(new ol.View({
+            center: thronIntMecator,
+            zoom: 19
+     }));
+};
 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
   
