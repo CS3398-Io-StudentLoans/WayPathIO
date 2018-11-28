@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <div id="content">
+    <p><a href="#">&nbsp WayPathIO Map</a></p>
+</div>
+    
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+	<script type="text/javascript" src="./locations.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <div  id="msg" style = "top: 100 px" >Click to add a point.</div>
+    <div id="map" class="map"></div>
+    <div id="info" style="display: none;"></div>
+    <script>
+    function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				}
+				
+				function myDataFunction() {
+				document.getElementById("myDataDropdown").classList.toggle("show");
+				}
+				
+				function filterFunction() {
+					var input, filter, ul, li, a, i;
+					input = document.getElementById("myInput");
+					filter = input.value.toUpperCase();
+					div = document.getElementById("myDropdown");
+					a = div.getElementsByTagName("a");
+					for (i = 0; i < a.length; i++) {
+						if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							a[i].style.display = "";
+						} else {
+							a[i].style.display = "none";
+						}
+					}
+				}
+    
+    </script>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">&#9660</button>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
+        <a href="">About</a>
+        <a href="#" onclick="panAcad()" >Academic Services Building North</a>
+        <a href="#" onclick="panAcad()" >Academic Services Building South</a>
+        <a href="#" onclick="panAcadGar()">Academy Street Garage</a>
+        <a href="#" onclick="panAg()">Agriculture</a>
+        <a href="Alkek" onclick="panAlk()">Albert B. Alkek Library</a>
+        <a href="#" onclick="panAlk()">Albert B. Alkek Parking Garage</a>
+        <a href="#" onclick="panAngel()">Angelina Hall</a>
+        <a href="#" onclick="panAqua()">Aqua Sports Center</a>
+        <a href="#" onclick="panArnHall()">Arnold Hall</a>
+        <a href="#" onclick="panBare()">Beretta Hall</a>
+        <a href="#" onclick="panBexH()">Bexar Hall</a>
+        <a href="#" onclick="panBlan()">Blanco Hall</a>
+        <a href="#" onclick="panblanPark()">Blanco Parking Garage</a>
+        <a href="#" onclick="panballPark()">Bobcat Ballpark</a>
+        <a href="#" onclick="panbobStand()">Bobcat Stadium</a>
+        <a href="#" onclick="panbobStandEnd()">Bobcat Stadium End Zone Complex</a>
+        <a href="#" onclick="panbobVill()">Bobcat Village</a>
+        <a href="#" onclick="panbrazon()">Brazos</a>
+        <a href="#">Brogdon Hall</a>
+        <a href="#" onclick="panbutlHall()">Butler Hall</a>
+        <a href="#" onclick="pancentHall()">Centennial Hall</a>
+        <a href="#" onclick="pancenterStuRet()">Center for Student Retention</a>
+        <a href="#" onclick="panchautHall()">Chautauqua Hall</a>
+        <a href="#" onclick="panchem()">Chemistry</a>
+        <a href="#">Child Development Center</a>
+        <a href="#">College Inn</a>
+        <a href="#">College of Education</a>
+        <a href="#">Colorado</a>
+        <a href="#">Comal</a>
+        <a href="#">Commons Dining Hall</a>
+        <a href="#">Derrick Hall</a>  
+        <a href="#">Edward Gary Street Garage</a>
+        <a href="#">Elliott Hall</a>
+        <a href="#">Emmett & Miriam McCoy Hall</a>
+        <a href="#">Encino Hall</a>
+        <a href="#">Evans Liberal Arts</a>
+        <a href="#">alls Hall</a>
+        <a href="#">Family & Consumer Sciences</a>
+        <a href="#">Fire Station Studio</a>
+        <a href="#" onclick="panFh()">Flowers Hall</a>
+        <a href="#">Freeman Aquatic Biology</a>
+        <a href="#">Freeman Ranch</a>
+        <a href="#">Gaillardia Hall</a>
+        <a href="#">Harris Dining Hall</a>
+        <a href="#">Hill House</a>
+        <a href="#">Hines Academic Center</a>
+        <a href="#">Ivey-Moore House</a>
+        <a href="#">Jackson Hall</a>
+        <a href="#">JC Kellam Administration</a>
+        <a href="#">Jerome & Catherine Supple Science</a>
+        <a href="#">Joann Cole Mitte</a>
+        <a href="#">Jones Dining Center</a>
+        <a href="#">Jowers Center</a>
+        <a href="#">Lampasas</a>
+        <a href="#">Lantana Hall</a>
+        <a href="#">Laurel Hall</a>
+        <a href="#">LBJ Parking Garage</a>
+        <a href="#">LBJ Student Center</a>
+        <a href="#">Math Computer Science</a>
+        <a href="">Matthews Street Garage</a>
+        <a href="">Medina</a>
+        <a href="">Moeller House</a>
+        <a href="">Music</a>
+        <a href="">Nueces</a>
+        <a href="">Old Main</a>
+        <a href="">Outdoor Center</a>
+        <a href="">Pecos</a>
+        <a href="">Pedernales</a>
+        <a href="">Performing Arts Center</a>
+        <a href="">Physical Plant</a>
+        <a href="">Pleasant Street Garage</a>
+        <a href="">Recycling Center</a>
+        <a href="">Research Greenhouse</a>
+        <a href="">Retama Hall</a>
+        <a href="">Richard A. Castro Undergraduate Admissions Center</a>
+        <a href="">River House</a>
+        <a href="">Roy F. Mitte</a>
+        <a href="">Sabinal</a>
+        <a href="">San Gabriel Hall</a>
+        <a href="">San Jacinto Hall</a>
+        <a href="">San Marcos Hall</a>
+        <a href="">Sayers Hall</a>
+        <a href="">Science Greenhouse</a>
+        <a href="">Smith Hall</a>
+        <a href="">Smith House</a>
+        <a href="">Speck Street Garage</a>
+        <a href="">Spring Lake Hall</a>
+        <a href="">Sterry Hall</a>
+        <a href="">Strahan Coliseum & Darren B. Casey Athletic Administration Complex</a>
+        <a href="">Strahan House</a>
+        <a href="">Student Health Center</a>
+        <a href="">Student Recreation Center</a>
+        <a href="">Swinney Guest House</a>
+        <a href="">Swinney House</a>
+        <a href="#" onclick="panTmh()">Taylor-Murphy History</a>
+        <a href="">Tennis Center</a>
+        <a href="">The Tower</a>
+        <a href="">Theatre Center</a>
+        <a href="">Thornton International House</a>
+        <a href="">Tower Garage</a>
+        <a href="">Track & Field Facility</a>
+        <a href="">Trinity</a>
+        <a href="">Undergraduate Academic Center</a>
+        <a href="">University Camp</a>
+        <a href="">University Distribution Center (Central Warehouse)</a>
+        <a href="">University Press (Print Shop) / West Warehouse</a>
+        <a href="">William & Elizabeth Adamson ROTC</a> 
+        <a href="">Woods Street Garage</a>  
+      </div>
+    </div>
+
+    <label for="track" class ="overlay">
+      track position
+      <input id="track" type="checkbox"/>
+    </label>
+    <p class="overlay">
+      position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
+      location : <code id="location"></code>&nbsp;&nbsp;
+    </p>
+    <script src="./map.js"></script>
+    
+  </body>
+</html>
