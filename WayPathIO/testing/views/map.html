@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Using OpenLayers with Webpack</title>
+    <title>WayPathIO</title>
     <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-    <title>Geolocation</title>
     <div id="content">
     <p><a href="#">&nbsp WayPathIO Map</a></p>
   </head>
@@ -165,5 +164,88 @@
     </p>
     
     <script src="javascripts/bundle.js"></script>
+
+    <button class="dropbtn" style="bottom: 1% ; left: 1% ; font-size: 1em; position:absolute" id="show_button" onclick="openForm(); Date()">&#11044</button>
+<div class="form-popup" id="myForm">
+  <form action="/" method="post" class="form-container">
+
+    <label for="name"><b>Building Name</b></label>
+    
+    <input id="name" placeholder="Enter Building Name" name="name" required >
+    <br>
+  <label for="busy"><b>Busy Level</b></label><br>
+    <input type="radio" class="form-radio" style="background-color:green" name="busy" value="1" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:yellow" name="busy" value="2" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:red" name="busy" value="3" onclick="this.form.submit();">
+    <!---<input type="number" placeholder="Enter Busy Level" name="busy" required>--->
+    <br><br>
+    <input style="display: none" id="time" name="time">
+    <!--<button type="submit" class="dropbtn" style="width: 100%" >Submit</button>-->
+    <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
+  </form>
+
+<script type="text/javascript">
+    var button = document.getElementById('show_button')
+    button.addEventListener('click',hideshow,false);
+
+    function hideshow() {
+        document.getElementById('hidden-div').style.display = 'block'; 
+        this.style.display = 'none'
+    }   
+    
+function time() {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var t = (h*60) + m ;
+    
+    return t;
+    }
+
+
+  document.getElementById('time').value = time();
+  
+  document.getElementById('name').value = "Alkek";
+  
+
+</script>
+
+
+<script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
+
+// animations stutter on mobile or slow devices.
+   
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+
+</script>
   </body>
 </html>
