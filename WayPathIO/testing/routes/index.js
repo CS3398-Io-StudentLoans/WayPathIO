@@ -34,11 +34,11 @@ router.get('/form', (req, res) => {
 //getting data
 router.get('/', (req, res) => {
   Registration.findOne(function(err, bus){
-    res.render('map', {title: 'Map'});
     var name = bus;
     res.render('map', name);
     var busy = bus;
     res.render('map', busy);
+     res.render('map', {title: 'Map'});
     console.log("found: " + bus);
   });
 });
@@ -55,6 +55,7 @@ router.post('/',
       .withMessage('Please enter an number'),
   ],
   (req, res) => {
+  
   console.log(req.body);
     const errors = validationResult(req);
 
@@ -64,8 +65,9 @@ router.post('/',
     .then(() => { res.render('map', {title: 'Map'}); })
     .catch(() => { res.send('Sorry! Something went wrong.'); });
 } else {
+
       res.render('map', {
-        title: 'Registration form',
+        title: 'Map',
         errors: errors.array(),
         data: req.body,
       });
