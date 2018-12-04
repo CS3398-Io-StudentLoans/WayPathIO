@@ -8,14 +8,11 @@
     <div id="content">
     <p><a href="#">&nbsp WayPathIO Map</a></p>
   </head>
-  <body>
-    <script> 
+  <body> 
     <div id = "fcolor">
-        var busyLevel = (<%= busy %>);
         Busy:
-        document.write(busyLevel)
+        <%= busy %>;
     </div>
-    </script>
 
     <div id="msg" style = "top: 100 px" >Click to add a point.</div>
     <div id="map"></div>
