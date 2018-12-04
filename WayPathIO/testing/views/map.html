@@ -9,6 +9,13 @@
     <p><a href="#">&nbsp WayPathIO Map</a></p>
   </head>
   <body> 
+      <script>
+        function recompute(){
+              document.getElementById('name').value = bname;
+            
+        }
+      
+      </script>
 
     <div id="msg" style = "bottom: 50px" >Click to add a point.</div>
     <div id="map"></div>
@@ -40,31 +47,31 @@
     </script>
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">&#9660</button>
-      <div id="myDropdown" class="dropdown-content">
+      <div id="fcolor" class="dropdown-content">
         <input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
         <a href="">About</a>
-        <a href="#" onclick="panAcad()" >Academic Services Building North</a>
-        <a href="#" onclick="panAcad()" >Academic Services Building South</a>
-        <a href="#" onclick="panAcadGar()">Academy Street Garage</a>
-        <a href="#" onclick="panAg()">Agriculture</a>
-        <a href="Alkek" onclick="panAlk()">Albert B. Alkek Library</a>
-        <a href="#" onclick="panAlk()">Albert B. Alkek Parking Garage</a>
-        <a href="#" onclick="panAngel()">Angelina Hall</a>
-        <a href="#" onclick="panAqua()">Aqua Sports Center</a>
-        <a href="#" onclick="panArnHall()">Arnold Hall</a>
-        <a href="#" onclick="panBare()">Beretta Hall</a>
-        <a href="#" onclick="panBexH()">Bexar Hall</a>
-        <a href="#" onclick="panBlan()">Blanco Hall</a>
-        <a href="#" onclick="panblanPark()">Blanco Parking Garage</a>
-        <a href="#" onclick="panballPark()">Bobcat Ballpark</a>
-        <a href="#" onclick="panbobStand()">Bobcat Stadium</a>
-        <a href="#" onclick="panbobStandEnd()">Bobcat Stadium End Zone Complex</a>
-        <a href="#" onclick="panbobVill()">Bobcat Village</a>
-        <a href="#" onclick="panbrazon()">Brazos</a>
-        <a href="#">Brogdon Hall</a>
-        <a href="#" onclick="panbutlHall()">Butler Hall</a>
-        <a href="#" onclick="pancentHall()">Centennial Hall</a>
-        <a href="#" onclick="pancenterStuRet()">Center for Student Retention</a>
+          <input type = "checkbox" onchange= "bname = Academic Services Building North; recompute();" />Academic Services Building North<br>
+        <input type = "checkbox" onchange= "bname = 'Academic Services Building South'; recompute();" />Academic Services Building South<br>
+        <input type = "checkbox" onchange= "bname = 'Academy Street Garage'; recompute();" />Academy Street Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Agriculture'; recompute();" />Agriculture<br>
+        <input type = "checkbox" onchange= "bname = 'Albert B. Alkek Library'; recompute();" />Albert B. Alkek Library<br>
+        <input type = "checkbox" onchange= "bname = 'Albert B. Alkek Parking Garage'; recompute();" />Albert B. Alkek Parking Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Angelina Hall'; recompute();">Angelina Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Aqua Sports Center'; recompute();">Aqua Sports Center<br>
+        <input type = "checkbox" onchange= "bname = 'Arnold Hall'; recompute();">Arnold Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Beretta Hall'; recompute();">Beretta Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Bexar Hall'; recompute();">Bexar Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Blanco Hall'; recompute();" /> Blanco Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Blanco Parking Garage'; recompute();">Blanco Parking Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Ballpark'; recompute();">Bobcat Ballpark<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Stadium'; recompute();">Bobcat Stadium<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Stadium End Zone Complex'; recompute();">Bobcat Stadium End Zone Complex<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Village'; recompute();">Bobcat Village<br>
+        <input type = "checkbox" onchange= "bname = 'Brazos'; recompute();">Brazos<br>
+        <input type = "checkbox" onchange= "bname = 'Brogdon Hall'; recompute();">Brogdon Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Butler Hall'; recompute();">Butler Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Centennial Hall'; recompute();">Centennial Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Center for Student Retention'; recompute();">Center for Student Retention<br>
         <a href="#" onclick="panchautHall()">Chautauqua Hall</a>
         <a href="#" onclick="panchem()">Chemistry</a>
         <a href="#">Child Development Center</a>
@@ -219,7 +226,7 @@ function time() {
 
   document.getElementById('time').value = time();
   
-  document.getElementById('name').value = "Alkek";
+  //document.getElementById('name').value = "Alkek";
   
 
 </script>
