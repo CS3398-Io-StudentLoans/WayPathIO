@@ -9,7 +9,6 @@ const router = express.Router();
 
 const Registration = mongoose.model('Registration');
 
-
 //to use html in views file using ejs
 exports.index = function(req, res){
 res.render('index', { title: 'ejs' });};
@@ -35,11 +34,11 @@ router.get('/form', (req, res) => {
 //getting data
 router.get('/', (req, res) => {
   Registration.findOne(function(err, bus){
+    res.render('map', {title: 'Map'});
     var name = bus;
     res.render('map', name);
     var busy = bus;
     res.render('map', busy);
-    res.render('map', {title: 'Map'});
     console.log("found: " + bus);
   });
 });
