@@ -14,7 +14,7 @@
 }
 
 #msg{
-    position: absolute;
+    position: relative;
     z-index: 10;
     top: 12%;
     left: 50%;
@@ -106,7 +106,9 @@
 
 /* end of submission form*/
 
-      
+#fcolor {
+  color: black;
+}   
 
 /*border on top */
 #content, #right {

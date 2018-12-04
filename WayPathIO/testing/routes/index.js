@@ -33,7 +33,11 @@ router.get('/form', (req, res) => {
 
 //getting data
 router.get('/', (req, res) => {
-  res.render('map', {title: 'Map'});
+  Registration.findOne(function(err, bus){
+    res.render('map', {title: 'Map', busy: bus});
+
+    console.log("found: " + bus);
+  });
 });
 
 //posting data with validation of minimum size

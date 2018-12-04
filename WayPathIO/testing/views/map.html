@@ -9,6 +9,14 @@
     <p><a href="#">&nbsp WayPathIO Map</a></p>
   </head>
   <body>
+    <script> 
+    <div id = "fcolor">
+        var busyLevel = (<%= busy %>);
+        Busy:
+        document.write(busyLevel)
+    </div>
+    </script>
+
     <div id="msg" style = "top: 100 px" >Click to add a point.</div>
     <div id="map"></div>
     <div id="info" style="display: none;"></div>
@@ -158,7 +166,7 @@
       <input id="track" type="checkbox"/>
     </label>
 
-    <p class="overlay">
+    <p id = fcolor class="overlay">
       position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
       location : <code id="location"></code>&nbsp;&nbsp;
     </p>
@@ -212,7 +220,6 @@ function time() {
 
 
 <script>
-
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -244,8 +251,7 @@ function filterFunction() {
         }
     }
 }
-
-
 </script>
+
   </body>
 </html>
