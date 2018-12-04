@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>'
+	<script src="https://cdn.jsdelivr.net/npm/graphhopper-js-api-client/dist/graphhopper-client.js"></script>
+	<script src = "graphhoper-client.js"></script>
+
+    <title>GRAPHHOPPER ATTEMPT</title>
+  </head>
+  <body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+	<script>
+	require('graphhopper-js-api-client');
+	// If you only need e.g. Routing, you can only require the needed parts
+	//var GraphHopperRouting = require('graphhopper-js-api-client/src/GraphHopperRouting');
+	//var GHInput = require('graphhopper-js-api-client/src/GHInput');
+ 
+	window.onload = function() {	
+ 
+		var defaultKey = "2e56a8ad-9ca8-484e-9526-0fc70fd19742";
+		var profile = "car";
+ 
+		var host;
+		var ghRouting = new GraphHopper.Routing({key: defaultKey, host: host, vehicle: profile, elevation: false});
+		// If you only need e.g. Routing, you can only require the needed parts
+		//var ghRouting = new GraphHopperRouting({key: defaultKey, host: host, vehicle: profile, elevation: false});
+ 
+		// Setup your own Points
+		ghRouting.addPoint(new GHInput(47.400905, 8.534317));
+		ghRouting.addPoint(new GHInput(47.394108, 8.538265));
+ 
+		ghRouting.doRequest()
+		.then(function(json){
+			// Add your own result handling here
+			console.log(json);
+		})
+		.catch(function(err){
+			console.error(err.message);
+		});
+ 
+	};
+</script>
+	
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-97.942999, 29.888998]),
+          zoom: 16
+        })
+      });
+    </script>
+  </body>
+</html>
