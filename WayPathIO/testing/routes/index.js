@@ -21,6 +21,22 @@ router.get('/registrations', (req, res) => {
     .catch(() => { res.send('Sorry! Something went wrong.'); });
 });
 
+router.get('/main', (req, res) => {
+  Registration.find()
+    .then((registrations) => {
+      res.render('main', { title: 'Busy Level', registrations });
+    })
+    .catch(() => { res.send('Sorry! Something went wrong.'); });
+});
+
+router.get('/aboutus', (req, res) => {
+  Registration.find()
+    .then((registrations) => {
+      res.render('aboutus', { title: 'Busy Level', registrations });
+    })
+    .catch(() => { res.send('Sorry! Something went wrong.'); });
+});
+
 router.get('/form', (req, res) => {
   Registration.find()
     .then((registrations) => {
