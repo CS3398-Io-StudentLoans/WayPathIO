@@ -159,10 +159,11 @@
     </div>
     
     <button class="dropbtn" style="bottom: 20% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="opengpsForm(); Date(); closeForm()">&#8853</button>
-<div class="form-popup" id="gpsForm">
-     <form action="/"  for="track" class="form-container" style="width:200; height:400">
-      <input id="track" type="checkbox" autocomplete="off" class="form-checkbox-gps" style="width: 100%">  
-      <br>
+<div class="form-popup" style = "left :44%; bottom: 45%" id="gpsForm">
+     <form action="/"  for="track" class="form-container" style="width:400; height:400 ">
+      <input id="track" type="checkbox" autocomplete="off" class="form-checkbox-gps" style="width: 100%; display: none">
+      
+       <label for="track" class="labelmy" ><b>Track GPS?</b></label>  <br>
        <button type="button" class="dropbtn" style="width: 100%" onclick="closegpsForm()">Close</button>
 
     </form>
@@ -176,8 +177,8 @@
     <script src="javascripts/bundle.js"></script>
 
     <button class="dropbtn" style="bottom: 10% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="openForm(); Date(); closegpsForm()">&#11044</button>
-<div class="form-popup" id="myForm">
-  <form action="/" method="post" class="form-container">
+<div class="form-popup" style = "left :36.5%" id="myForm">
+  <form action="/" method="post" class="form-container" >
 
     <label for="name"><b>Building Name</b></label>
     <input id="name" placeholder="Enter Building Name" name="name" required >
@@ -239,6 +240,7 @@ function opengpsForm() {
 function closegpsForm() {
   document.getElementById("gpsForm").style.display = "none";
 } 
+
 
 // animations stutter on mobile or slow devices.
    
