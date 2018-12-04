@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon ./start.js"
+    "watch": "nodemon ./graphhopper-client.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "docker": "^1.0.0",
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-validator": "^5.3.0",
+    "graphhopper-js-api-client": "^0.11.0",
+    "maven": "^4.4.1",
     "mongoose": "^5.3.10",
     "pug": "^2.0.3"
   },
