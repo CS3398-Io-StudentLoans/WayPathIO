@@ -34,8 +34,11 @@ router.get('/form', (req, res) => {
 //getting data
 router.get('/', (req, res) => {
   Registration.findOne(function(err, bus){
-    res.render('map', {title: 'Map', busy: bus});
-
+    res.render('map', {title: 'Map'});
+    var name = bus;
+    res.render('map', name);
+    var busy = bus;
+    res.render('map', busy);
     console.log("found: " + bus);
   });
 });
