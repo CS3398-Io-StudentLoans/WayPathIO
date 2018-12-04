@@ -365,6 +365,14 @@ table img {
      
      
 }
+
+
+.form-checkbox-gps form span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+
 .form-radio-gps::checked:before
 {
      position: relative;
@@ -394,4 +402,35 @@ label
      color: #666;
      cursor: pointer;
 } 
+
+.labelmy{
+
+-webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+ 
+    background-color:  #667399;
+    opacity : 0.9;
+    padding: 13px;
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  bottom: 40 px;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+  font: 300 16px/1.7 'Open Sans', sans-serif;
+     color: #white;
+     
+}
+
+.labelmy:hover{
+    background-color:  #3e4c74;
+}
 
