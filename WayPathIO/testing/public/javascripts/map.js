@@ -71,6 +71,39 @@ var trinity =     [ -97.939773, 29.890966 ];
 var undAcCent =   [ -97.942614, 29.888031 ];
 var rotc =        [ -97.950180, 29.887425 ];
 var woodsStGar =  [ -97.943903, 29.887520 ];
+var brog =        [ -97.939912, 29.888306 ];
+var childDev =    [ -97.949724, 29.887692 ];
+var collegeInn =  [ -97.946416, 29.889273 ];
+var collegeOfEdu =[ -97.938996, 29.888254 ];
+var colorado =    [ -97.939155, 29.891149 ];
+var comal =       [ -97.940735, 29.889386 ];
+var comDinn =     [ -97.940289, 29.888215 ];
+var derrick =     [ -97.942115, 29.889361 ];
+var garyStGar =   [ -97.939390, 29.885879 ];
+var elliott =     [ -97.944189, 29.888343 ];
+var mcCoy =       [ -97.944597, 29.888059 ];
+var encinoH =     [ -97.945921, 29.889108 ];
+var evansLiber =  [ -97.941971, 29.888679 ];
+var fallHall =    [ -97.951418, 29.886900 ];
+var famConSci =   [ -97.949414, 29.888764 ];
+var freemanAquBio=[ -97.935722, 29.889679 ];
+var giallaHall =  [ -97.946651, 29.889979 ];
+var harrisH =     [ -97.951144, 29.888111 ];
+var hillHouse =   [ -97.937921, 29.889594 ];
+var hinesAcCen =  [ -97.938422, 29.890178 ];
+var iveyMoore =   [ -97.953556, 29.891450 ];
+var jacksonH =    [ -97.944589, 29.889970 ];
+var jcKellamAm =  [ -97.937526, 29.888792 ];
+var jeromeCole =  [ -97.946573, 29.888027 ];
+var joannCole =   [ -97.947827, 29.889423 ];
+var jowers =      [ -97.932774, 29.887289 ];
+var jones =       [ -97.942997, 29.887620 ];
+var lampasas =    [ -97.939403, 29.889160 ];
+var lantanaH =    [ -97.939732, 29.886961 ];
+var laurelH =     [ -97.940577, 29.887710 ];
+var lbjParking =  [ -97.945436, 29.889647 ];
+var lbjStCent =   [ -97.944841, 29.889274 ];
+var mathCS =      [ -97.942642, 29.889460 ];
 
 //var txStateWebMercator1 = ol.proj.fromLonLat(tmh);
 var txStateWebMercator = ol.proj.fromLonLat(txState);
@@ -90,6 +123,8 @@ var ballParkMercator = ol.proj.fromLonLat(ballPark);
 var bobStandEndMercator = ol.proj.fromLonLat(bobStadEnd);
 var bobVillMercator = ol.proj.fromLonLat(bobVill);
 var brazonMercator = ol.proj.fromLonLat(brazon);
+var brogdonMercator = ol.proj.fromLonLat(brogdon);
+
 var brogHallMercator = ol.proj.fromLonLat(brogHall);
 var butlHallMercator = ol.proj.fromLonLat(butlHall);
 var centHallMercator = ol.proj.fromLonLat(centHall);
@@ -148,6 +183,40 @@ var rotcMercator = ol.proj.fromLonLat(rotc);
 var retamaHallMecator = ol.proj.fromLonLat(retamaHall);
 var straHMecator = ol.proj.fromLonLat(straH);
 var thronIntMecator = ol.proj.fromLonLat(thronInt);
+
+var childDevMecator = ol.proj.fromLonLat(childDev);
+var collegeInnMecator = ol.proj.fromLonLat(collegeInn);
+var collegeOfEduMecator = ol.proj.fromLonLat(collegeOfEdu);
+var coloradoMecator = ol.proj.fromLonLat(colorado);
+var comalMecator = ol.proj.fromLonLat(comal);
+var domDinnMecator = ol.proj.fromLonLat(comDinn);
+var derrickMecator = ol.proj.fromLonLat(derrick);
+var garyStGarMecator = ol.proj.fromLonLat(garyStGar);
+var elliottMecator = ol.proj.fromLonLat(elliott);
+var mcCoyMecator = ol.proj.fromLonLat(mcCoy);
+var encinoHMecator = ol.proj.fromLonLat(encinoH);
+var evansLiberMecator = ol.proj.fromLonLat(evansLiber);
+var fallHallMecator = ol.proj.fromLonLat(fallHall);
+var famConSciMecator = ol.proj.fromLonLat(famConSci);
+var freemanAquBioMecator = ol.proj.fromLonLat(freemanAquBio);
+var giallaHallMecator = ol.proj.fromLonLat(giallaHall);
+var harrisHMecator = ol.proj.fromLonLat(harrisH);
+var hillHouseMecator = ol.proj.fromLonLat(hillHouse);
+var hinesAcCenMecator = ol.proj.fromLonLat(hinesAcCen);
+var iveyMooreMecator = ol.proj.fromLonLat(iveyMoore);
+var jacksonHMecator = ol.proj.fromLonLat(jacksonH);
+var jcKellamAmMecator = ol.proj.fromLonLat(jcKellamAm);
+var jeromeColeMecator = ol.proj.fromLonLat(jeromeCole);
+var joannColeMecator = ol.proj.fromLonLat(joannCole)
+var jCMitteMecator = ol.proj.fromLonLat(mitte);
+var jonesMecator = ol.proj.fromLanLat(jones);
+var jowersMecator = ol.proj.fromLonLat(jowers);
+var lampasasMecator = ol.proj.fromLonLat(lampasas);
+var lantanaHMecator = ol.proj.fromLonLat(lantanaH);
+var laurelHMecator = ol.proj.fromLonLat(laurelH);
+var lbjParkingMecator = ol.proj.fromLonLat(lbjParking);
+var lbjStCentMecator = ol.proj.fromLonLat(lbjStCent);
+var mathCSMecator = ol.proj.fromLonLat(mathCS);
 
 function changeToWebMercator(coord) {
   ol.proj.fromLonLat(coord)
@@ -318,6 +387,14 @@ function panTmh(){
             zoom: 19
      }));
 };
+
+      function panbrog(){
+  map.setView(new ol.View({
+            center: brogdonMercator,
+            zoom: 19
+     }));
+};
+
 
 
       function panbutlHall(){
@@ -686,6 +763,244 @@ function panTmh(){
      }));
 };
 
+function panchildDev(){
+  map.setView(new ol.View({
+            center: childDevMecator,
+            zoom: 19
+     }));
+
+};
+
+function pancollegeInn(){
+  map.setView(new ol.View({
+            center: collegeInnMecator,
+            zoom: 19
+     }));
+
+};
+
+function pancollegeOfEdu(){
+  map.setView(new ol.View({
+            center: collegeOfEdu,
+            zoom: 19
+     }));
+
+};
+
+function pancolorado(){
+  map.setView(new ol.View({
+            center: coloradoMecator,
+            zoom: 19
+     }));
+
+};
+function pancomal(){
+  map.setView(new ol.View({
+            center: comalMecator,
+            zoom: 19
+     }));
+
+};
+function pancomDinn(){
+  map.setView(new ol.View({
+            center: comalMecator,
+            zoom: 19
+     }));
+
+};
+function panderrick(){
+  map.setView(new ol.View({
+            center: derrickMecator,
+            zoom: 19
+     }));
+
+};
+
+function pangaryStGar(){
+  map.setView(new ol.View({
+            center: garyStGarMecator,
+            zoom: 19
+     }));
+
+};
+function panelliott(){
+  map.setView(new ol.View({
+            center: elliottMecator,
+            zoom: 19
+     }));
+
+};
+function panmcCoy(){
+  map.setView(new ol.View({
+            center: mcCoyMecator,
+            zoom: 19
+     }));
+
+};
+function panencinoH(){
+  map.setView(new ol.View({
+            center: encinoHMecator,
+            zoom: 19
+     }));
+
+};
+function panevansLiber(){
+  map.setView(new ol.View({
+            center: evansLiberMecator,
+            zoom: 19
+     }));
+
+};
+function panfallHall(){
+  map.setView(new ol.View({
+            center: fallHallMecator,
+            zoom: 19
+     }));
+
+};
+function panfamConSci(){
+  map.setView(new ol.View({
+            center: famConSciMecator,
+            zoom: 19
+     }));
+
+};
+function panfreemanAquBio(){
+  map.setView(new ol.View({
+            center: freemanAquBioMecator,
+            zoom: 19
+     }));
+
+};
+
+function pangiallaHall(){
+  map.setView(new ol.View({
+            center: giallaHallMecator,
+            zoom: 19
+     }));
+
+};
+
+function panharrisH(){
+  map.setView(new ol.View({
+            center: harrisHMecator,
+            zoom: 19
+     }));
+
+};
+function panhillHouse(){
+  map.setView(new ol.View({
+            center: hillHouseMecator,
+            zoom: 19
+     }));
+
+};
+function panhinesAcCen(){
+  map.setView(new ol.View({
+            center: hinesAcCenMecator,
+            zoom: 19
+     }));
+
+};
+function paniveyMoore(){
+  map.setView(new ol.View({
+            center: iveyMooreMecator,
+            zoom: 19
+     }));
+
+};
+function panjacksonH(){
+  map.setView(new ol.View({
+            center: jacksonHMecator,
+            zoom: 19
+     }));
+
+};
+function panjcKellamAm(){
+  map.setView(new ol.View({
+            center: jcKellamAmMecator,
+            zoom: 19
+     }));
+
+};
+function panjeromeCole(){
+  map.setView(new ol.View({
+            center: jeromeColeMecator,
+            zoom: 19
+     }));
+
+};
+function panjoannCole(){
+  map.setView(new ol.View({
+            center: joannColeMecator,
+            zoom: 19
+     }));
+
+};
+
+function panjowers(){
+  map.setView(new ol.View({
+            center: jowersMecator,
+            zoom: 19
+     }));
+
+};
+
+function panjones(){
+  map.setView(new ol.View({
+            center: jonesMecator,
+            zoom: 19
+     }));
+
+};
+
+function panlampasa(){
+  map.setView(new ol.View({
+            center: lampasasMecator,
+            zoom: 19
+     }));
+
+};
+
+function panlantanaH(){
+  map.setView(new ol.View({
+            center: lantanaHMecator,
+            zoom: 19
+     }));
+
+};
+
+function panlaurelH(){
+  map.setView(new ol.View({
+            center: laurelHMecator,
+            zoom: 19
+     }));
+
+};
+
+function panlbjParking(){
+  map.setView(new ol.View({
+            center: lbjParkingMecator,
+            zoom: 19
+     }));
+
+};
+
+function panlbjStCent(){
+  map.setView(new ol.View({
+            center: lbjStCentMecator,
+            zoom: 19
+     }));
+
+};
+
+function panmathCS(){
+  map.setView(new ol.View({
+            center: mathCSMecator,
+            zoom: 19
+     }));
+
+};
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGVkYW5pZWxuIiwiYSI6ImNqbWxsZGQ0ZTA5amUzam55b3poaG0wN3UifQ.-6Mmg4GCbTFKybn_1i8dRg';
   
 var map = new mapboxgl.Map({
