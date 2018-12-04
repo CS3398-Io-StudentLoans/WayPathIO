@@ -9,9 +9,6 @@
     <p><a href="#">&nbsp WayPathIO Map</a></p>
   </head>
   <body> 
-    <div id = "fcolor">
-        <%= locals.name %>: <%= locals.busy %>
-    </div>
 
     <div id="msg" style = "top: 100 px" >Click to add a point.</div>
     <div id="map"></div>
@@ -39,10 +36,14 @@
             }
           }
         }
+        
+  document.getElementById('time').value = time();
+  
+  document.getElementById('name').value = "Alkek";
     
     </script>
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">&#9660</button>
+      <button onclick="myFunction()" style= "top:250px" class="dropbtn">&#9660</button>
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
         <a href="">About</a>
@@ -156,25 +157,29 @@
         <a href="">Woods Street Garage</a>  
       </div>
     </div>
+    
+    <button class="dropbtn" style="bottom: 20% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="opengpsForm(); Date(); closeForm()">&#8853</button>
+<div class="form-popup" id="gpsForm">
+     <form action="/"  for="track" class="form-container" style="width:200; height:400">
+      <input id="track" type="checkbox" autocomplete="off" class="form-checkbox-gps" style="width: 100%">  
+      <br>
+       <button type="button" class="dropbtn" style="width: 100%" onclick="closegpsForm()">Close</button>
 
-    <label for="track" class ="overlay">
-      track position
-      <input id="track" type="checkbox"/>
-    </label>
+    </form>
+    </div>
 
-    <p id = fcolor class="overlay">
+    <p id = fcolor class = "overlay">
       position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
       location : <code id="location"></code>&nbsp;&nbsp;
     </p>
     
     <script src="javascripts/bundle.js"></script>
 
-    <button class="dropbtn" style="bottom: 1% ; left: 1% ; font-size: 1em; position:absolute" id="show_button" onclick="openForm(); Date()">&#11044</button>
+    <button class="dropbtn" style="bottom: 10% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="openForm(); Date(); closegpsForm()">&#11044</button>
 <div class="form-popup" id="myForm">
   <form action="/" method="post" class="form-container">
 
     <label for="name"><b>Building Name</b></label>
-    
     <input id="name" placeholder="Enter Building Name" name="name" required >
     <br>
   <label for="busy"><b>Busy Level</b></label><br>
@@ -186,6 +191,11 @@
     <input style="display: none" id="time" name="time">
     <!--<button type="submit" class="dropbtn" style="width: 100%" >Submit</button>-->
     <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
+     
+     <div id = "fcolor" class = form-container>
+        <%= name %> <br>
+        Current Busy Level: <%= busy %>
+    </div>
   </form>
 
 <script type="text/javascript">
@@ -207,9 +217,7 @@ function time() {
     }
 
 
-  document.getElementById('time').value = time();
-  
-  document.getElementById('name').value = "Alkek";
+
   
 
 </script>
@@ -222,6 +230,14 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+} 
+
+function opengpsForm() {
+  document.getElementById("gpsForm").style.display = "block";
+}
+
+function closegpsForm() {
+  document.getElementById("gpsForm").style.display = "none";
 } 
 
 // animations stutter on mobile or slow devices.
