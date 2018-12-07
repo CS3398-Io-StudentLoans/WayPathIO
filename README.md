@@ -17,7 +17,7 @@ The map and data base are currently linked up, the map does navigation functions
 **The code we used for demo is in testing folder under master branch.**
 
 ## **Running the Code**  	
-  1. Use the integration_testing_DLE branch
+  1. Use the master branch
   2. navigate to the testing directory
   3. run $npm run watch
   4. Map opens from localhost:3000
