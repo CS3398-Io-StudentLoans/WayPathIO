@@ -6,11 +6,9 @@
    * Daniel Le
    * Jose (Jay) Martinez
    * Rolando Martinez
-   * Maojun (Brandon) Tian
+   * Maojun (Brandon) Tian - landing page(index.html https://github.com/CS3398-IoStudentLoans/WayPathIO/blob/develop/WayPathIO/index.html)
    
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
-
-## **Status of Project**
 Our project currently has a landing page (localhost:3000/main), a map page (localhost:3000) and a infomation page (localhost:3000/aboutus). 
 The landing page and info page is functioning with mobile friendly sites but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
 The map and data base are currently linked up, the map does navigation functions and can push and pull data from the database.
@@ -34,7 +32,6 @@ The map and data base are currently linked up, the map does navigation functions
    * Rolando Martinez - WOrking on finding the locations of each building in Texas State University and making buttons to pull information from our database which held information about the busy levels of the buildings. My contributions will be foud in /WayPathIO/testing. In the testing/views folder, there will be the map.html file which holds the code for building buttons. Under /testing/public/javascripts there will be a map.js file which holds the code of the building's goelocation on the map. This code was intended to allow the user to use the map's building buttons to navigate and assist the user in finding the building, but we failed to implement this function during our final sprint. 
    * Maojun (Brandon) Tian - Get function that pulls and displays data from data base, it is used when the page is loaded in a browser and the data is showed when the push button is clicked. The main code can be found in index.js under WayPathIO/testing/routes under integration_testing_DLE branch.
 
-
 ## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. We will all go through the tutorial for OpenLayers in order to use it with the Node.js web framework.
    * Brian Chamblee - Change the post button to an update button 
@@ -42,8 +39,5 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Jose (Jay) Martinez - 
    * Rolando Martinez - Begin implamenting our online database
    * Maojun (Brandon) Tian - figure out how to calcuulate average busy level of a building and display on map.
-   
-   
-   
 
 

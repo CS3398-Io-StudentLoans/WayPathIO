@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WayPathIO</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
+    <div id="content">
+    <p><a href="main">&nbsp WayPathIO Map</a></p>
+  </head>
+  <body> 
+      <script>
+        function recompute(){
+              document.getElementById('name').value = bname;
+            
+        }
+      
+      </script>
+
+    <div id="msg" style = "bottom: 50px" >Click to add a point.</div>
+    <div id="map"></div>
+    <div id="info" style="display: none;"></div>
+    <script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        function myDataFunction() {
+        document.getElementById("myDataDropdown").classList.toggle("show");
+        }
+        
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.getElementsByTagName("a");
+          for (i = 0; i < a.length; i++) {
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+    
+    </script>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">&#9660</button>
+      <div id="fcolor" class="dropdown-content">
+        <input type="text" placeholder="Destination.." id="myInput" onkeyup="filterFunction()">
+        <a href="">About</a>
+          <input type = "checkbox" onchange= "bname = 'Academic Services Building North'; recompute();" />Academic Services Building North<br>
+        <input type = "checkbox" onchange= "bname = 'Academic Services Building South'; recompute();" />Academic Services Building South<br>
+        <input type = "checkbox" onchange= "bname = 'Academy Street Garage'; recompute();" />Academy Street Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Agriculture'; recompute();" />Agriculture<br>
+        <input type = "checkbox" onchange= "bname = 'Albert B. Alkek Library'; recompute();" />Albert B. Alkek Library<br>
+        <input type = "checkbox" onchange= "bname = 'Albert B. Alkek Parking Garage'; recompute();" />Albert B. Alkek Parking Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Angelina Hall'; recompute();">Angelina Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Aqua Sports Center'; recompute();">Aqua Sports Center<br>
+        <input type = "checkbox" onchange= "bname = 'Arnold Hall'; recompute();">Arnold Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Beretta Hall'; recompute();">Beretta Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Bexar Hall'; recompute();">Bexar Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Blanco Hall'; recompute();" /> Blanco Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Blanco Parking Garage'; recompute();">Blanco Parking Garage<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Ballpark'; recompute();">Bobcat Ballpark<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Stadium'; recompute();">Bobcat Stadium<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Stadium End Zone Complex'; recompute();">Bobcat Stadium End Zone Complex<br>
+        <input type = "checkbox" onchange= "bname = 'Bobcat Village'; recompute();">Bobcat Village<br>
+        <input type = "checkbox" onchange= "bname = 'Brazos'; recompute();">Brazos<br>
+        <input type = "checkbox" onchange= "bname = 'Brogdon Hall'; recompute();">Brogdon Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Butler Hall'; recompute();">Butler Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Centennial Hall'; recompute();">Centennial Hall<br>
+        <input type = "checkbox" onchange= "bname = 'Center for Student Retention'; recompute();">Center for Student Retention<br>
+        <a href="#" onclick="panchautHall()">Chautauqua Hall</a>
+        <a href="#" onclick="panchem()">Chemistry</a>
+        <a href="#">Child Development Center</a>
+        <a href="#">College Inn</a>
+        <a href="#">College of Education</a>
+        <a href="#">Colorado</a>
+        <a href="#">Comal</a>
+        <a href="#">Commons Dining Hall</a>
+        <a href="#">Derrick Hall</a>  
+        <a href="#">Edward Gary Street Garage</a>
+        <a href="#">Elliott Hall</a>
+        <a href="#">Emmett & Miriam McCoy Hall</a>
+        <a href="#">Encino Hall</a>
+        <a href="#">Evans Liberal Arts</a>
+        <a href="#">alls Hall</a>
+        <a href="#">Family & Consumer Sciences</a>
+        <a href="#">Fire Station Studio</a>
+        <a href="#" onclick="panFh()">Flowers Hall</a>
+        <a href="#">Freeman Aquatic Biology</a>
+        <a href="#">Freeman Ranch</a>
+        <a href="#">Gaillardia Hall</a>
+        <a href="#">Harris Dining Hall</a>
+        <a href="#">Hill House</a>
+        <a href="#">Hines Academic Center</a>
+        <a href="#">Ivey-Moore House</a>
+        <a href="#">Jackson Hall</a>
+        <a href="#">JC Kellam Administration</a>
+        <a href="#">Jerome & Catherine Supple Science</a>
+        <a href="#">Joann Cole Mitte</a>
+        <a href="#">Jones Dining Center</a>
+        <a href="#">Jowers Center</a>
+        <a href="#">Lampasas</a>
+        <a href="#">Lantana Hall</a>
+        <a href="#">Laurel Hall</a>
+        <a href="#">LBJ Parking Garage</a>
+        <a href="#">LBJ Student Center</a>
+        <a href="#">Math Computer Science</a>
+        <a href="">Matthews Street Garage</a>
+        <a href="">Medina</a>
+        <a href="">Moeller House</a>
+        <a href="">Music</a>
+        <a href="">Nueces</a>
+        <a href="">Old Main</a>
+        <a href="">Outdoor Center</a>
+        <a href="">Pecos</a>
+        <a href="">Pedernales</a>
+        <a href="">Performing Arts Center</a>
+        <a href="">Physical Plant</a>
+        <a href="">Pleasant Street Garage</a>
+        <a href="">Recycling Center</a>
+        <a href="">Research Greenhouse</a>
+        <a href="">Retama Hall</a>
+        <a href="">Richard A. Castro Undergraduate Admissions Center</a>
+        <a href="">River House</a>
+        <a href="">Roy F. Mitte</a>
+        <a href="">Sabinal</a>
+        <a href="">San Gabriel Hall</a>
+        <a href="">San Jacinto Hall</a>
+        <a href="">San Marcos Hall</a>
+        <a href="">Sayers Hall</a>
+        <a href="">Science Greenhouse</a>
+        <a href="">Smith Hall</a>
+        <a href="">Smith House</a>
+        <a href="">Speck Street Garage</a>
+        <a href="">Spring Lake Hall</a>
+        <a href="">Sterry Hall</a>
+        <a href="">Strahan Coliseum & Darren B. Casey Athletic Administration Complex</a>
+        <a href="">Strahan House</a>
+        <a href="">Student Health Center</a>
+        <a href="">Student Recreation Center</a>
+        <a href="">Swinney Guest House</a>
+        <a href="">Swinney House</a>
+        <a href="#" onclick="panTmh()">Taylor-Murphy History</a>
+        <a href="">Tennis Center</a>
+        <a href="">The Tower</a>
+        <a href="">Theatre Center</a>
+        <a href="">Thornton International House</a>
+        <a href="">Tower Garage</a>
+        <a href="">Track & Field Facility</a>
+        <a href="">Trinity</a>
+        <a href="">Undergraduate Academic Center</a>
+        <a href="">University Camp</a>
+        <a href="">University Distribution Center (Central Warehouse)</a>
+        <a href="">University Press (Print Shop) / West Warehouse</a>
+        <a href="">William & Elizabeth Adamson ROTC</a> 
+        <a href="">Woods Street Garage</a>  
+      </div>
+    </div>
+    
+        <button class="dropbtn" style="bottom: 20% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="opengpsForm(); Date(); closeForm()">&#8853</button>
+<div class="form-popup" style = "left :44%; bottom: 45%" id="gpsForm">
+     <form action="/"  for="track" class="form-container" style="width:400; height:400 ">
+      <input id="track" type="checkbox" autocomplete="off" class="form-checkbox-gps" style="width: 100%; display: none">
+      
+       <label for="track" class="labelmy" ><b>Track GPS</b></label>  <br>
+       <button type="button" class="dropbtn" style="width: 100%" onclick="closegpsForm()">Close</button>
+
+    </form>
+    </div>
+    
+
+ 
+
+    <p id = fcolor class="overlay">
+      position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
+      location : <code id="location"></code>&nbsp;&nbsp;
+    </p>
+    
+    <script src="javascripts/bundle.js"></script>
+
+    <button class="dropbtn" style="bottom: 10% ; left: 1% ; font-size: .5em; position:absolute" id="show_button" onclick="openForm(); Date()">&#11044</button>
+<div class="form-popup" id="myForm">
+  <form action="/" method="post" class="form-container">
+
+    <label for="name"><b>Building Name</b></label>
+    
+    <input id="name" placeholder="Enter Building Name" name="name" required >
+    <br>
+  <label for="busy"><b>Busy Level</b></label><br>
+    <input type="radio" class="form-radio" style="background-color:green" name="busy" value="1" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:yellow" name="busy" value="2" onclick="this.form.submit();">
+    <input type="radio" class="form-radio" style="background-color:red" name="busy" value="3" onclick="this.form.submit();">
+    <!---<input type="number" placeholder="Enter Busy Level" name="busy" required>--->
+    <br><br>
+    <input style="display: none" id="time" name="time">
+    <!--<button type="submit" class="dropbtn" style="width: 100%" >Submit</button>-->
+    <button type="button" class="dropbtn" style="width: 100%" onclick="closeForm()">Close</button>
+    
+     <div id = "fcolor">
+        <%= locals.name %>: Busy Level <%= locals.busy %>
+    </div>
+  </form>
+
+<script type="text/javascript">
+    var button = document.getElementById('show_button')
+    button.addEventListener('click',hideshow,false);
+
+    function hideshow() {
+        document.getElementById('hidden-div').style.display = 'block'; 
+        this.style.display = 'none'
+    }   
+    
+function time() {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var t = (h*60) + m ;
+    
+    return t;
+    }
+
+
+  document.getElementById('time').value = time();
+  
+  //document.getElementById('name').value = "Alkek";
+  
+
+</script>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
+
+function opengpsForm() {
+  document.getElementById("gpsForm").style.display = "block";
+}
+
+function closegpsForm() {
+  document.getElementById("gpsForm").style.display = "none";
+} 
+
+
+// animations stutter on mobile or slow devices.
+   
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+  </body>
+</html>
