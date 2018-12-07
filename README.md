@@ -13,6 +13,7 @@ Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texa
 ## **Status of Project**
 Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning with mobile friendly sites but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
 The map and data base are currently linked up, the map does navigation functions and can push and pull data from the database.
+**The code we used for demo is in testing folder under integration_testing_DLE branch.**
 
 ## **Running the Code**
 To run the map:
