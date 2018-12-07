@@ -6,7 +6,7 @@
    * Daniel Le
    * Jose (Jay) Martinez
    * Rolando Martinez
-   * Maojun (Brandon) Tian - landing page(index.html https://github.com/CS3398-IoStudentLoans/WayPathIO/blob/develop/WayPathIO/index.html)
+   * Maojun (Brandon) Tian
    
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
