@@ -6,13 +6,13 @@
    * Daniel Le
    * Jose (Jay) Martinez
    * Rolando Martinez
-   * Maojun (Brandon) Tian - landing page(index.html https://github.com/CS3398-IoStudentLoans/WayPathIO/blob/develop/WayPathIO/index.html)
+   * Maojun (Brandon) Tian
    
 Project developed for the Fall 2018 Software Engineering Class (CS 3398) at Texas State University.
 
 ## **Status of Project**
 Our project currently has a landing page, a map page and a infomation page. The landing page and info page is functioning with mobile friendly sites but our map page is not completely finished with all locations. We currently have 24 locations available from the dropdown manu.
-The map and data base are not currently linked up, the map does navigation functions and the database can push and pull data
+The map and data base are currently linked up, the map does navigation functions and can push and pull data from the database.
 
 ## **Running the Code**
 To run the map:
@@ -34,7 +34,8 @@ To use database:
    * Daniel Le - Added Geolocation and Navigation functionalities to the map. This is located in "oltest" folder in develop branch
    * Jose (Jay) Martinez
    * Rolando Martinez - Worked on getting buttons to pull from mangodb
-   * Maojun (Brandon) Tian - Mobile Optimization
+   * Maojun (Brandon) Tian - Get function that pulls and displays data from data base, it is used when the page is loaded in a browser and the data is showed when the push button is clicked. The main code can be found in index.js under WayPathIO/testing/routes under integration_testing_DLE branch.
+
 
 ## **Next Steps**
 We will be finishing the map and making sure all basic functions work. We will also be adding more features such as path calculation and optimization. We will all go through the tutorial for OpenLayers in order to use it with the Node.js web framework.
@@ -42,7 +43,7 @@ We will be finishing the map and making sure all basic functions work. We will a
    * Daniel Le - Integrate shapefiles with map, add navigation features for walking
    * Jose (Jay) Martinez - 
    * Rolando Martinez - Begin implamenting our online database
-   * Maojun (Brandon) Tian - Optimizing and addign features to our map page.
+   * Maojun (Brandon) Tian - figure out how to calcuulate average busy level of a building and display on map.
    
 
 
